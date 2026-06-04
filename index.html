@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishvaas Properties | Leeds Property & VP Manager AI</title>
+  <meta name="description" content="Vishvaas Properties LTD: Leeds property acquisition, refurbishment, refinancing, lettings, building services, and VP Manager AI demo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-50: #f4f7f4;
+      --brand-100: #e4ebe4;
+      --brand-200: #cbd7cc;
+      --brand-500: #769178;
+      --brand-700: #4a5c4b;
+      --accent-500: #c23b22;
+      --charcoal-900: #18221b;
+      --charcoal-700: #2b342d;
+      --white: #ffffff;
+      --radius: 14px;
+      --shadow: 0 14px 30px rgba(24, 34, 27, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      color: var(--charcoal-900);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(118, 145, 120, 0.20), transparent 25%),
+        radial-gradient(circle at 82% 12%, rgba(194, 59, 34, 0.12), transparent 22%),
+        linear-gradient(180deg, #f7faf7 0%, #edf3ed 40%, #f7faf7 100%);
+      line-height: 1.5;
+    }
+
+    .container {
+      width: min(1140px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(10px);
+      background: rgba(247, 250, 247, 0.92);
+      border-bottom: 1px solid var(--brand-100);
+    }
+
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      min-height: 84px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      text-decoration: none;
+      color: var(--charcoal-900);
+      font-weight: 700;
+    }
+
+    .logo img {
+      height: 54px;
+      width: auto;
+      background: #fff;
+      border-radius: 10px;
+      padding: 3px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--brand-100);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 0.93rem;
+      font-weight: 600;
+      color: var(--charcoal-700);
+      padding: 0.45rem 0.7rem;
+      border-radius: 999px;
+      transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+      background: var(--brand-100);
+      color: var(--brand-700);
+    }
+
+    .hero {
+      padding: 3.5rem 0 2.8rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 1.8rem;
+      align-items: stretch;
+    }
+
+    .panel {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--brand-100);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.2rem;
+    }
+
+    .eyebrow {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-500);
+      font-weight: 700;
+      margin: 0 0 0.4rem;
+    }
+
+    h1, h2, h3 {
+      font-family: "Space Grotesk", sans-serif;
+      margin: 0;
+      line-height: 1.14;
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 3.7vw, 3rem);
+      margin-bottom: 0.8rem;
+    }
+
+    h2 {
+      font-size: clamp(1.35rem, 2.4vw, 2rem);
+      margin-bottom: 0.45rem;
+    }
+
+    p.lead {
+      margin: 0.6rem 0 1rem;
+      color: #415046;
+      max-width: 58ch;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 0.8rem;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border: 1px solid var(--brand-200);
+      background: var(--white);
+      color: var(--brand-700);
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.35rem 0.7rem;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .stat {
+      background: linear-gradient(180deg, #ffffff 0%, #f2f7f2 100%);
+      border: 1px solid var(--brand-100);
+      border-radius: 12px;
+      padding: 0.9rem;
+    }
+
+    .stat strong {
+      font-size: 1.35rem;
+      display: block;
+      color: var(--brand-700);
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .section {
+      padding: 2.1rem 0;
+    }
+
+    .cards {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--brand-100);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: #3f4d44;
+      font-size: 0.95rem;
+    }
+
+    .images {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .images figure {
+      margin: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--brand-100);
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .images img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      filter: saturate(1.05);
+    }
+
+    .images figcaption {
+      padding: 0.65rem 0.75rem;
+      font-size: 0.82rem;
+      color: #3e4b42;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem;
+      margin-top: 0.75rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      border: 1px solid var(--brand-200);
+      border-radius: 10px;
+      padding: 0.7rem 0.75rem;
+      font: inherit;
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 84px;
+      resize: vertical;
+      grid-column: 1 / -1;
+    }
+
+    .btn {
+      background: linear-gradient(90deg, var(--brand-700), var(--brand-500));
+      color: #fff;
+      border: 0;
+      border-radius: 10px;
+      padding: 0.65rem 0.95rem;
+      font-weight: 700;
+      margin-top: 0.55rem;
+      cursor: pointer;
+    }
+
+    .vp-demo {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+
+    .chat-shell {
+      background: #101712;
+      color: #ebf3eb;
+      border-radius: 12px;
+      border: 1px solid #253128;
+      padding: 0.8rem;
+    }
+
+    .chat-msg {
+      border-radius: 10px;
+      padding: 0.65rem;
+      margin-bottom: 0.6rem;
+      font-size: 0.92rem;
+    }
+
+    .chat-msg.user {
+      background: rgba(118, 145, 120, 0.18);
+      border: 1px solid rgba(118, 145, 120, 0.28);
+    }
+
+    .chat-msg.assistant {
+      background: rgba(194, 59, 34, 0.15);
+      border: 1px solid rgba(194, 59, 34, 0.35);
+    }
+
+    .thinking {
+      font-size: 0.8rem;
+      color: #b6c6b9;
+      margin-bottom: 0.45rem;
+      font-style: italic;
+    }
+
+    .prompt-box {
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .prompt-box input {
+      background: #f8fbf8;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.87rem;
+      background: #fff;
+      border: 1px solid var(--brand-100);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 0.55rem;
+      border-bottom: 1px solid var(--brand-100);
+    }
+
+    th {
+      background: #f0f5f0;
+      font-weight: 700;
+      color: var(--charcoal-700);
+    }
+
+    .notice {
+      margin-top: 0.9rem;
+      background: #fff;
+      border-left: 4px solid var(--accent-500);
+      padding: 0.8rem;
+      border-radius: 10px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      margin-top: 2rem;
+      border-top: 1px solid var(--brand-100);
+      padding: 1.5rem 0 2.3rem;
+      color: #4a5a50;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .vp-demo,
+      .cards,
+      .images {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      nav ul {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-wrap">
+      <a class="logo" href="#home">
+        <img src="image-1.png" alt="Vishvaas Properties logo">
+        <span>Vishvaas Properties</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#tenants">Tenants</a></li>
+          <li><a href="#landlords">Landlords</a></li>
+          <li><a href="#investors">Investors</a></li>
+          <li><a href="#building-services">Building services</a></li>
+          <li><a href="#vp-manager-ai">VP Manager AI</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="panel">
+          <p class="eyebrow">Vishvaas Properties LTD</p>
+          <h1>Leeds Property Specialists + Next Generation PropTech AI</h1>
+          <p class="lead">
+            We buy, refurbish, refinance, and then let or sell quality homes across Leeds and West Yorkshire.
+            We have delivered more than 15 completed projects with local authority and building regulation checks,
+            fast cash-purchase timelines, and specialist pathways for international students, workers, and legal migrants.
+          </p>
+          <div class="chip-row">
+            <span class="chip">Company No: 13587087</span>
+            <span class="chip">Incorporated: 26 Aug 2021</span>
+            <span class="chip">Tingley, Wakefield</span>
+          </div>
+          <div class="notice">
+            Companies House summary included from public search results. We will add the full verified company profile block in the next sprint.
+          </div>
+        </div>
+        <div class="panel">
+          <h2>Where We Operate</h2>
+          <p class="lead">Leeds and surrounding West Yorkshire locations, with end-to-end project delivery from acquisition to compliant lettings.</p>
+          <div class="stat-grid">
+            <div class="stat"><strong>15+</strong>completed projects</div>
+            <div class="stat"><strong>4 weeks</strong>target cash completion</div>
+            <div class="stat"><strong>Solar</strong>retrofit options</div>
+            <div class="stat"><strong>BRRRR</strong>buy-refurb-refinance-rent/sell</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Project Journey: UK Properties From Purchase to Completion</h2>
+        <p class="lead">Sample imagery for Leeds and UK property lifecycle, including before/after refurbishment style references.</p>
+        <div class="images">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1560184897-ae75f418493e?auto=format&fit=crop&w=1200&q=80" alt="Leeds street and housing">
+            <figcaption>Leeds and West Yorkshire neighbourhood focus.</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80" alt="Property refurbishment in progress">
+            <figcaption>Refurbishment stage with multi-trade execution.</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80" alt="Completed modern property interior">
+            <figcaption>Completed, compliant, tenant-ready results.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tenants">
+      <div class="container cards">
+        <article class="card">
+          <h3>Tenants</h3>
+          <p>Information-led lettings for local residents and international arrivals, plus upcoming guidance aligned with the Renters' Rights Bill and related tenant information updates.</p>
+          <form>
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Name" required>
+              <input type="email" name="email" placeholder="Email" required>
+              <input type="tel" name="phone" placeholder="Phone (optional)">
+            </div>
+            <textarea name="message" required>I am interested in tenant accommodation options and tenant support information.</textarea>
+            <button class="btn" type="button">Send Tenant Enquiry</button>
+          </form>
+        </article>
+
+        <article class="card" id="landlords">
+          <h3>Landlords</h3>
+          <p>Professional landlord services are expanding, with AI-enabled estate and lettings management capabilities currently in structured rollout.</p>
+          <form>
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Name" required>
+              <input type="email" name="email" placeholder="Email" required>
+              <input type="tel" name="phone" placeholder="Phone (optional)">
+            </div>
+            <textarea name="message" required>I am a landlord and would like to discuss management and upcoming AI-enabled services.</textarea>
+            <button class="btn" type="button">Send Landlord Enquiry</button>
+          </form>
+        </article>
+
+        <article class="card" id="investors">
+          <h3>Investors</h3>
+          <p>We welcome investor partnerships for buy-refurb-sell and BRRRR projects in Leeds and surrounding areas, supported by clear operational delivery.</p>
+          <form>
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Name" required>
+              <input type="email" name="email" placeholder="Email" required>
+              <input type="tel" name="phone" placeholder="Phone (optional)">
+            </div>
+            <textarea name="message" required>I am interested in investor opportunities for property acquisition, refurbishment, and exits.</textarea>
+            <button class="btn" type="button">Send Investor Enquiry</button>
+          </form>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="building-services">
+      <div class="container panel">
+        <h2>Building Services</h2>
+        <p class="lead">Qualified trades and project planning for auction and distressed properties: electricians, plumbers, EPC assessors, roofers, bricklayers, joiners, painters, decorators, and refurbishment advisory for BRRRR strategy.</p>
+        <p>Service capabilities include refurbishment planning, compliance pathways, and AI-enabled investment calculations to support feasibility and project sequencing.</p>
+        <form>
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="Phone (optional)">
+          </div>
+          <textarea name="message" required>I need building and refurbishment support for a property project.</textarea>
+          <button class="btn" type="button">Send Building Services Enquiry</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="vp-manager-ai">
+      <div class="container">
+        <div class="panel" style="margin-bottom:1rem;">
+          <p class="eyebrow">VP Manager AI</p>
+          <h2>Static Demo: Chat-First Property Management</h2>
+          <p class="lead">VP Manager is a new platform to manage properties, tenants, works, and trades through simple natural-language workflows with dashboard reporting. Built in partnership with E2E Software Solutions Ltd.</p>
+        </div>
+
+        <div class="vp-demo">
+          <div class="chat-shell">
+            <div class="chat-msg user">Show me what I need to do next [landlord].</div>
+            <div class="thinking">VP Manager AI is reviewing active compliance and maintenance schedules...</div>
+            <div class="chat-msg assistant">
+              Two priority tasks identified:<br>
+              1) 14 Victoria Terrace, Leeds LS9 8BD: Boiler service due. Gas engineer Adam booked for 15 June 2026.<br>
+              2) 22 Brook Lane, Morley LS27 9RN: EICR inspection and certificate booked for 18 June 2026.<br><br>
+              Do you want me to check whether I can reschedule both jobs with the tradesmen?
+            </div>
+            <div class="prompt-box">
+              <input type="text" value="Show me what I need to do next [landlord]" aria-label="Demo prompt" readonly>
+              <button class="btn" type="button">Send</button>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>Managed Properties (Demo Data)</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Address</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>VP-001</td><td>14 Victoria Terrace, Leeds LS9 8BD</td><td>Maintenance due</td></tr>
+                <tr><td>VP-002</td><td>22 Brook Lane, Morley LS27 9RN</td><td>EICR scheduled</td></tr>
+                <tr><td>VP-003</td><td>9 Carlton View, Wakefield WF2 8PT</td><td>Tenant occupied</td></tr>
+                <tr><td>VP-004</td><td>31 Regent Street, Bradford BD1 4PN</td><td>Refurb in progress</td></tr>
+                <tr><td>VP-005</td><td>7 Ash Grove, Headingley LS6 3JJ</td><td>Compliance clear</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <strong>Vishvaas Properties LTD</strong><br>
+      Company number: 13587087 | Leeds and West Yorkshire operations | Contact and service forms are currently demo wiring for this static build.
+    </div>
+  </footer>
+</body>
+</html>
