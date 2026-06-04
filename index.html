@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishvaas Properties Ltd | Leeds Property & Next-Gen PropTech AI</title>
-    <!-- Tailwind CSS -->
+    <title>Vishvaas Properties Ltd | Leeds Property & VP Manager AI</title>
+    <meta name="description" content="Vishvaas Properties Ltd: buy, refurb, refinance, let or sell homes in Leeds and West Yorkshire, with VP Manager AI for property operations.">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Premium Fonts: Inter & Space Grotesk for high-end SaaS feel -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <!-- FontAwesome for standard icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -29,7 +28,7 @@
                             200: '#cbd7cc',
                             300: '#a7bda9',
                             400: '#819f83',
-                            500: '#769178', // Main Brand Sage Green from image_4134c1.png
+                            500: '#769178',
                             600: '#5d745e',
                             700: '#4a5c4b',
                             800: '#3c4b3d',
@@ -40,13 +39,13 @@
                             100: '#e1e3e1',
                             500: '#59605b',
                             800: '#232b26',
-                            900: '#18221b', // Dark Slate Charcoal from logo text
-                            950: '#0c110e', // Deepest background charcoal
+                            900: '#18221b',
+                            950: '#0c110e',
                         },
                         accent: {
                             50: '#fdf3f2',
                             100: '#fbe4e1',
-                            500: '#c23b22', // Crimson tag accent from image_4134c1.png
+                            500: '#c23b22',
                             600: '#a62f19',
                         }
                     }
@@ -54,45 +53,45 @@
             }
         }
     </script>
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f4f7f4; /* Organic warm-light background aligned with logo */
+            background-color: #f4f7f4;
             color: #18221b;
             overflow-x: hidden;
         }
-        .glow-effect {
-            box-shadow: 0 0 30px rgba(118, 145, 120, 0.15);
-        }
+
         .dark-glass {
-            background: rgba(24, 34, 27, 0.85);
+            background: rgba(24, 34, 27, 0.9);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
+
         .light-glass {
-            background: rgba(255, 255, 255, 0.75);
+            background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(118, 145, 120, 0.15);
         }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
+
+        .section-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(118, 145, 120, 0.2);
+            backdrop-filter: blur(10px);
         }
-        ::-webkit-scrollbar-track {
-            background: #f4f7f4;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #cbd7cc;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #769178;
-        }
+
         .typing-indicator span {
             animation: blink 1.4s infinite both;
         }
-        .typing-indicator span:nth-child(2) { animation-delay: .2s; }
-        .typing-indicator span:nth-child(3) { animation-delay: .4s; }
+
+        .typing-indicator span:nth-child(2) {
+            animation-delay: .2s;
+        }
+
+        .typing-indicator span:nth-child(3) {
+            animation-delay: .4s;
+        }
+
         @keyframes blink {
             0% { opacity: .2; }
             20% { opacity: 1; }
@@ -102,1035 +101,364 @@
 </head>
 <body class="antialiased selection:bg-brand-500 selection:text-white">
 
-    <!-- Custom Toast Notification Container -->
-    <div id="custom-toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
-        <div class="bg-charcoal-900 text-white px-5 py-3 rounded-xl shadow-2xl flex items-center space-x-3 border border-brand-500/30">
-            <i class="fa-solid fa-circle-check text-xl text-brand-500"></i>
-            <span id="toast-message" class="font-medium text-sm">Action Complete</span>
-        </div>
-    </div>
-
-    <!-- Navigation Header -->
     <header class="sticky top-0 z-40 w-full light-glass border-b border-brand-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <!-- Logo with embedded source file image_4134c1.png -->
-                <div class="flex items-center space-x-3">
-                    <div class="bg-white p-1 rounded-xl shadow-sm border border-brand-100 flex items-center justify-center">
-                        <!-- Referencing file verbatim as image_4134c1.png with logo colors -->
-                        <img src="image-1.png" alt="Vishvaas Properties Ltd Logo" class="h-12 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/150x60/f4f7f4/769178?text=VPL';">
-                    </div>
-                </div>
+                <a href="#home" class="bg-white p-1 rounded-xl shadow-sm border border-brand-100 flex items-center justify-center">
+                    <img src="image-1.png" alt="Vishvaas Properties Ltd Logo" class="h-12 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/150x60/f4f7f4/769178?text=VPL';">
+                </a>
 
-                <!-- Desktop Nav Links -->
-                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                    <a href="#about" class="text-charcoal-800 hover:text-brand-600 transition-colors">Our Property Engine</a>
-                    <a href="#lettings" class="text-charcoal-800 hover:text-brand-600 transition-colors">Lettings & Pathways</a>
-                    <a href="#ai-app" class="text-charcoal-800 hover:text-brand-600 transition-colors flex items-center gap-1.5">
-                        <span class="relative flex h-2 w-2">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-500 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-accent-500"></span>
-                        </span>
-                        AI PropTech Sandbox
-                    </a>
-                    <a href="#portals" class="text-charcoal-800 hover:text-brand-600 transition-colors">Portals Gateway</a>
+                <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                    <a href="#home" class="text-charcoal-800 hover:text-brand-600 transition-colors">Home</a>
+                    <a href="#tenants" class="text-charcoal-800 hover:text-brand-600 transition-colors">Tenants</a>
+                    <a href="#landlords" class="text-charcoal-800 hover:text-brand-600 transition-colors">Landlords</a>
+                    <a href="#investors" class="text-charcoal-800 hover:text-brand-600 transition-colors">Investors</a>
+                    <a href="#building-services" class="text-charcoal-800 hover:text-brand-600 transition-colors">Building services</a>
+                    <a href="#vp-manager-ai" class="text-charcoal-800 hover:text-brand-600 transition-colors">VP Manager AI</a>
                 </nav>
 
-                <!-- CTA Buttons -->
-                <div class="hidden sm:flex items-center space-x-4">
-                    <a href="#contact" class="px-4 py-2 text-xs uppercase tracking-wider font-bold border border-brand-300 hover:border-brand-600 rounded-lg text-brand-700 hover:text-brand-900 transition-all">
-                        Sell Your Property
-                    </a>
-                    <a href="#ai-app" class="px-4 py-2 text-xs uppercase tracking-wider font-bold bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 text-white rounded-lg shadow-lg shadow-brand-500/20 transition-all">
-                        Launch Demo App
-                    </a>
-                </div>
-
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-charcoal-800 hover:text-brand-600 focus:outline-none p-2" aria-label="Toggle Menu">
-                        <i class="fa-solid fa-bars text-2xl"></i>
-                    </button>
-                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-charcoal-800 hover:text-brand-600 p-2" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
             </div>
         </div>
 
-        <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden md:hidden border-t border-brand-100 bg-white px-4 py-4 space-y-3">
-            <a href="#about" class="block text-charcoal-800 hover:text-brand-600 text-base py-2">Our Property Engine</a>
-            <a href="#lettings" class="block text-charcoal-800 hover:text-brand-600 text-base py-2">Lettings & Pathways</a>
-            <a href="#ai-app" class="block text-charcoal-800 hover:text-brand-600 text-base py-2">AI PropTech Sandbox</a>
-            <a href="#portals" class="block text-charcoal-800 hover:text-brand-600 text-base py-2">Portals Gateway</a>
-            <div class="pt-4 flex flex-col gap-3">
-                <a href="#contact" class="text-center py-2.5 text-xs font-bold border border-brand-300 rounded-lg text-brand-700">
-                    Sell Your Property
-                </a>
-                <a href="#ai-app" class="text-center py-2.5 text-xs font-bold bg-brand-600 text-white rounded-lg">
-                    Launch Demo App
-                </a>
-            </div>
+        <div id="mobile-menu" class="hidden md:hidden border-t border-brand-100 bg-white px-4 py-4 space-y-2">
+            <a href="#home" class="block text-charcoal-800 hover:text-brand-600 text-base py-2">Home</a>
+            <a href="#tenants" class="block text-charcoal-800 hover:text-brand-600 text-base py-2">Tenants</a>
+            <a href="#landlords" class="block text-charcoal-800 hover:text-brand-600 text-base py-2">Landlords</a>
+            <a href="#investors" class="block text-charcoal-800 hover:text-brand-600 text-base py-2">Investors</a>
+            <a href="#building-services" class="block text-charcoal-800 hover:text-brand-600 text-base py-2">Building services</a>
+            <a href="#vp-manager-ai" class="block text-charcoal-800 hover:text-brand-600 text-base py-2">VP Manager AI</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden bg-gradient-to-b from-brand-50 via-white to-brand-100/50">
-        <!-- Background Grid & Glowing Blobs based on the Logo Colors -->
-        <div class="absolute inset-0 bg-[linear-gradient(to_right,#cbd7cc_1px,transparent_1px),linear-gradient(to_bottom,#cbd7cc_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30"></div>
+    <section id="home" class="relative pt-12 pb-20 md:pt-20 md:pb-24 overflow-hidden bg-gradient-to-b from-brand-50 via-white to-brand-100/50">
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#cbd7cc_1px,transparent_1px),linear-gradient(to_bottom,#cbd7cc_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-25"></div>
         <div class="absolute top-20 left-1/4 w-96 h-96 bg-brand-200/40 rounded-full blur-[120px] pointer-events-none"></div>
-        <div class="absolute top-40 right-1/4 w-80 h-80 bg-accent-100/30 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute top-48 right-1/4 w-80 h-80 bg-accent-100/30 rounded-full blur-[100px] pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Alert Badge with Logo Accent Red -->
             <div class="flex justify-center mb-6">
                 <div class="inline-flex items-center space-x-2 bg-white/90 border border-brand-200 px-3.5 py-1.5 rounded-full text-xs text-brand-800 shadow-sm">
-                    <span class="bg-accent-500 text-white font-extrabold px-2 py-0.5 rounded-full text-[10px] tracking-wide">COMPANIES HOUSE REGISTERED</span>
-                    <span class="font-medium text-charcoal-800">Leeds and West Yorkshire Property Acquisition, Refurb & Lettings</span>
+                    <span class="bg-accent-500 text-white font-extrabold px-2 py-0.5 rounded-full text-[10px] tracking-wide">COMPANIES HOUSE</span>
+                    <span class="font-medium text-charcoal-800">VISHVAAS PROPERTIES LTD | Company No: 13587087 | Incorporated 26 August 2021</span>
                 </div>
             </div>
 
-            <!-- Hero Headlines -->
             <div class="text-center max-w-4xl mx-auto">
                 <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-charcoal-900 mb-6 leading-[1.1] font-display">
-                    Bridging Physical Property Trust <br>
-                    <span class="bg-gradient-to-r from-brand-600 via-brand-500 to-accent-600 bg-clip-text text-transparent">With Next-Gen Multimodal AI</span>
+                    Vishvaas Properties in Leeds and West Yorkshire<br>
+                    <span class="bg-gradient-to-r from-brand-600 via-brand-500 to-accent-600 bg-clip-text text-transparent">Property Expertise + Next-Generation AI Operations</span>
                 </h1>
-                <p class="text-lg sm:text-xl text-charcoal-500 mb-8 max-w-2xl mx-auto leading-relaxed">
-                    We buy off-market, deploy our internal qualified builder force to high-end standards, retrofit solar, refinance, and let compliant homes across Leeds—whilst crafting the future of digital property management.
+                <p class="text-lg sm:text-xl text-charcoal-500 mb-8 max-w-3xl mx-auto leading-relaxed">
+                    We buy, refurbish, refinance, and then let or sell properties. Our team includes fully qualified builders and trusted trades,
+                    with solar-focused upgrades and compliance checks from local authorities and building regulations.
+                    We also support faster cash purchases before auction, with a completion target of around 4 weeks depending on solicitors.
                 </p>
-                
-                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-                    <a href="#ai-app" class="px-8 py-4 text-sm font-semibold bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 text-white rounded-xl shadow-lg shadow-brand-500/25 flex items-center justify-center gap-2 transform hover:-translate-y-0.5 transition-all">
-                        <i class="fa-solid fa-microchip"></i> Try the Interactive AI Sandbox
-                    </a>
-                    <a href="#about" class="px-8 py-4 text-sm font-semibold bg-white hover:bg-brand-50 text-charcoal-900 border border-brand-200 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm">
-                        Explore Our Leeds Engine
-                    </a>
-                </div>
-            </div>
 
-            <!-- Trust Badges & Local Footprint Statistics -->
-            <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-                <div class="bg-white p-5 rounded-2xl text-center shadow-md border border-brand-100">
-                    <div class="text-3xl sm:text-4xl font-extrabold text-brand-600 mb-1">15+</div>
-                    <div class="text-xs uppercase tracking-wider text-charcoal-500 font-mono font-semibold">Completed Projects</div>
-                    <div class="text-[10px] text-brand-700 mt-1">Leeds & Surrounding Areas</div>
-                </div>
-                <div class="bg-white p-5 rounded-2xl text-center shadow-md border border-brand-100">
-                    <div class="text-3xl sm:text-4xl font-extrabold text-charcoal-900 mb-1">4 Wks</div>
-                    <div class="text-xs uppercase tracking-wider text-charcoal-500 font-mono font-semibold">Cash Buy Targets</div>
-                    <div class="text-[10px] text-brand-700 mt-1">No Agent / Chain Delays</div>
-                </div>
-                <div class="bg-white p-5 rounded-2xl text-center shadow-md border border-brand-100">
-                    <div class="text-3xl sm:text-4xl font-extrabold text-accent-500 mb-1">Solar</div>
-                    <div class="text-xs uppercase tracking-wider text-charcoal-500 font-mono font-semibold">Eco Refurbished</div>
-                    <div class="text-[10px] text-brand-700 mt-1">Lower Utility Footprints</div>
-                </div>
-                <div class="bg-white p-5 rounded-2xl text-center shadow-md border border-brand-100">
-                    <div class="text-3xl sm:text-4xl font-extrabold text-brand-500 mb-1">PropTech</div>
-                    <div class="text-xs uppercase tracking-wider text-charcoal-500 font-mono font-semibold">Multimodal AI</div>
-                    <div class="text-[10px] text-brand-700 mt-1">Chat & Voice Beta Dashboard</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mt-10">
+                    <div class="bg-white p-5 rounded-2xl text-center shadow-md border border-brand-100">
+                        <div class="text-3xl font-extrabold text-brand-600 mb-1">15+</div>
+                        <div class="text-xs uppercase tracking-wider text-charcoal-500 font-mono font-semibold">Completed Projects</div>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl text-center shadow-md border border-brand-100">
+                        <div class="text-3xl font-extrabold text-charcoal-900 mb-1">Leeds</div>
+                        <div class="text-xs uppercase tracking-wider text-charcoal-500 font-mono font-semibold">Core Operating Area</div>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl text-center shadow-md border border-brand-100">
+                        <div class="text-3xl font-extrabold text-accent-500 mb-1">Solar</div>
+                        <div class="text-xs uppercase tracking-wider text-charcoal-500 font-mono font-semibold">Energy Upgrades</div>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl text-center shadow-md border border-brand-100">
+                        <div class="text-3xl font-extrabold text-brand-500 mb-1">4 Weeks</div>
+                        <div class="text-xs uppercase tracking-wider text-charcoal-500 font-mono font-semibold">Cash Completion Target</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Bricks & Mortar Engine (The BRRR Process) -->
-    <section id="about" class="py-24 relative bg-white border-t border-brand-100">
+    <section class="py-16 bg-white border-y border-brand-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs uppercase tracking-widest font-mono text-accent-500 font-bold flex items-center justify-center gap-1.5">
-                    <i class="fa-solid fa-hammer"></i> Real Estate Operations
-                </span>
-                <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900 font-display mt-2 mb-4">Our West Yorkshire Property Refurb Cycle</h2>
-                <p class="text-charcoal-500">
-                    From instant cash transactions to eco-conscious smart transformations, our local building and management divisions execute flawlessly to secure robust, long-term asset yields.
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900 font-display">Where We Operate and How We Transform Properties</h2>
+                <p class="text-charcoal-500 mt-3">Leeds and surrounding West Yorkshire, from acquisition to refurbishment and completed tenant-ready homes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="rounded-2xl overflow-hidden border border-brand-100 shadow-md bg-white">
+                    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80" alt="Leeds and West Yorkshire streets" class="h-56 w-full object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-charcoal-900">Leeds and West Yorkshire</h3>
+                        <p class="text-sm text-charcoal-500 mt-1">Local market focus with practical knowledge of area demand and lettings standards.</p>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-brand-100 shadow-md bg-white">
+                    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80" alt="Property refurbishment process" class="h-56 w-full object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-charcoal-900">Refurbishment in Progress</h3>
+                        <p class="text-sm text-charcoal-500 mt-1">Professional trades including electricians, plumbers, roofers, joiners, and decorators.</p>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-brand-100 shadow-md bg-white">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80" alt="Completed property interior" class="h-56 w-full object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-charcoal-900">Completed and Compliant</h3>
+                        <p class="text-sm text-charcoal-500 mt-1">Properties checked for local authority and building regulation readiness.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mt-10">
+                <a href="#tenants" class="section-card rounded-xl p-4 shadow-sm hover:shadow-md transition-all">
+                    <h4 class="font-semibold text-charcoal-900">Tenants</h4>
+                    <p class="text-sm text-charcoal-500 mt-1">Guidance including Renters' Rights direction and support pathways.</p>
+                </a>
+                <a href="#landlords" class="section-card rounded-xl p-4 shadow-sm hover:shadow-md transition-all">
+                    <h4 class="font-semibold text-charcoal-900">Landlords</h4>
+                    <p class="text-sm text-charcoal-500 mt-1">AI-enabled agency services in professional rollout.</p>
+                </a>
+                <a href="#investors" class="section-card rounded-xl p-4 shadow-sm hover:shadow-md transition-all">
+                    <h4 class="font-semibold text-charcoal-900">Investors</h4>
+                    <p class="text-sm text-charcoal-500 mt-1">Buy, refurbish, refinance, and sell collaboration opportunities.</p>
+                </a>
+                <a href="#building-services" class="section-card rounded-xl p-4 shadow-sm hover:shadow-md transition-all">
+                    <h4 class="font-semibold text-charcoal-900">Building services</h4>
+                    <p class="text-sm text-charcoal-500 mt-1">Trade-led delivery and BRRRR planning support.</p>
+                </a>
+                <a href="#vp-manager-ai" class="section-card rounded-xl p-4 shadow-sm hover:shadow-md transition-all">
+                    <h4 class="font-semibold text-charcoal-900">VP Manager AI</h4>
+                    <p class="text-sm text-charcoal-500 mt-1">Chat-first property operations with dashboard reporting.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="tenants" class="py-20 bg-brand-50/50 border-b border-brand-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            <div>
+                <p class="text-xs uppercase tracking-widest font-mono text-accent-500 font-bold">Tenants</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900 font-display mt-2">Tenant Support for Local and International Residents</h2>
+                <p class="text-charcoal-500 mt-4 leading-relaxed">
+                    We support tenants including international students, workers, and legal migrants with practical pathways into quality housing.
+                    We are also preparing tenant education updates around the Renters' Rights Bill and related guidance.
                 </p>
+                <div class="mt-5 p-4 rounded-xl border border-brand-200 bg-white">
+                    <h3 class="font-semibold text-charcoal-900">Renters' Rights Information</h3>
+                    <p class="text-sm text-charcoal-500 mt-2">A tenant information sheet and rights summary section will be published here as regulations are finalized.</p>
+                </div>
             </div>
 
-            <!-- BRRR Cycle Visualizer -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                
-                <!-- Card 1: Buy -->
-                <div class="bg-brand-50/50 p-6 rounded-2xl shadow-sm border border-brand-100 hover:border-brand-400 transition-all relative group">
-                    <div class="absolute top-4 right-4 text-brand-200 group-hover:text-brand-500 font-mono font-bold text-3xl transition-colors">01</div>
-                    <div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center mb-6 shadow-sm">
-                        <i class="fa-solid fa-money-bill-wave text-brand-600 text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-charcoal-900 mb-2 font-display">Immediate Cash Buy</h3>
-                    <p class="text-charcoal-500 text-xs leading-relaxed">
-                        We acquire houses before auctions. Delivering immediate cash solutions with a strict 4-week exchange window aligned with the seller’s solicitors.
-                    </p>
-                    <ul class="mt-4 space-y-2 text-xs text-charcoal-500">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-500"></i> No chain complications</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-500"></i> Local expertise on pricing</li>
-                    </ul>
+            <form class="bg-white rounded-2xl border border-brand-100 shadow-md p-6">
+                <h3 class="text-lg font-semibold text-charcoal-900">Contact Us - Tenants</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                    <input type="text" placeholder="Name" class="w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm" required>
+                    <input type="email" placeholder="Email" class="w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm" required>
+                    <input type="tel" placeholder="Phone (optional)" class="sm:col-span-2 w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm">
+                    <textarea rows="4" class="sm:col-span-2 w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm">Hi, I am interested in tenant accommodation and support options with Vishvaas Properties.</textarea>
                 </div>
-
-                <!-- Card 2: Refurb -->
-                <div class="bg-brand-50/50 p-6 rounded-2xl shadow-sm border border-brand-100 hover:border-brand-400 transition-all relative group">
-                    <div class="absolute top-4 right-4 text-brand-200 group-hover:text-brand-500 font-mono font-bold text-3xl transition-colors">02</div>
-                    <div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center mb-6 shadow-sm">
-                        <i class="fa-solid fa-helmet-safety text-brand-600 text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-charcoal-900 mb-2 font-display">Internal Build Force</h3>
-                    <p class="text-charcoal-500 text-xs leading-relaxed">
-                        No middleman contractors. We employ our own fully-qualified builders and tradesmen (gas safe, electric certified) to handle major structural shifts.
-                    </p>
-                    <ul class="mt-4 space-y-2 text-xs text-charcoal-500">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-500"></i> High insulation retrofits</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-500"></i> High-quality material controls</li>
-                    </ul>
-                </div>
-
-                <!-- Card 3: Refinance -->
-                <div class="bg-brand-50/50 p-6 rounded-2xl shadow-sm border border-brand-100 hover:border-brand-400 transition-all relative group">
-                    <div class="absolute top-4 right-4 text-brand-200 group-hover:text-brand-500 font-mono font-bold text-3xl transition-colors">03</div>
-                    <div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center mb-6 shadow-sm">
-                        <i class="fa-solid fa-chart-line text-brand-600 text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-charcoal-900 mb-2 font-display">Eco-Solar Retrofits</h3>
-                    <p class="text-charcoal-500 text-xs leading-relaxed">
-                        To counter high modern utility bills, we integrate tier-1 solar panel networks onto roofs. This results in incredibly efficient green properties for tenants.
-                    </p>
-                    <ul class="mt-4 space-y-2 text-xs text-charcoal-500">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-500"></i> Solar-optimized battery storage</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-500"></i> Future-proof energy certificates</li>
-                    </ul>
-                </div>
-
-                <!-- Card 4: Let / Sell -->
-                <div class="bg-brand-50/50 p-6 rounded-2xl shadow-sm border border-brand-100 hover:border-brand-400 transition-all relative group">
-                    <div class="absolute top-4 right-4 text-brand-200 group-hover:text-brand-500 font-mono font-bold text-3xl transition-colors">04</div>
-                    <div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center mb-6 shadow-sm">
-                        <i class="fa-solid fa-building-circle-check text-brand-600 text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-charcoal-900 mb-2 font-display">Council Compliance</h3>
-                    <p class="text-charcoal-500 text-xs leading-relaxed">
-                        Every property undergoes comprehensive inspection by building regulations and local authorities to secure pristine compliance badges.
-                    </p>
-                    <ul class="mt-4 space-y-2 text-xs text-charcoal-500">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-500"></i> Fully licensed Leeds HMOs</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-500"></i> Top-tier fire-safety protocols</li>
-                    </ul>
-                </div>
-
-            </div>
+                <button type="button" class="mt-4 px-5 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm">Send Tenant Enquiry</button>
+            </form>
         </div>
     </section>
 
-    <!-- Lettings Compliance & Inclusivity -->
-    <section id="lettings" class="py-24 relative bg-brand-50/40 border-t border-brand-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                
-                <!-- Left Column: Context, Compliance and Special Pathways -->
-                <div>
-                    <span class="text-xs uppercase tracking-widest font-mono text-accent-500 font-bold flex items-center gap-1">
-                        <span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> International Pathways
-                    </span>
-                    <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900 font-display mt-2 mb-6">Unlocking Access for International Students & Legal Migrants</h2>
-                    
-                    <p class="text-charcoal-500 mb-6 leading-relaxed">
-                        Relocating to West Yorkshire for work or higher education should not mean fighting restrictive guarantor regulations. Vishvaas Properties simplifies the entire onboarding framework.
-                    </p>
-
-                    <div class="space-y-4">
-                        <div class="flex gap-4">
-                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white shadow-sm border border-brand-200 flex items-center justify-center text-brand-600">
-                                <i class="fa-solid fa-passport"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-semibold text-charcoal-900">Alternative Guarantor Approvals</h4>
-                                <p class="text-xs text-charcoal-500 mt-0.5">Flexible advanced rent schemes and secure overseas verification processes bypass traditional UK references.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex gap-4">
-                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white shadow-sm border border-brand-200 flex items-center justify-center text-brand-600">
-                                <i class="fa-solid fa-circle-nodes"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-semibold text-charcoal-900">Digital Pre-Onboarding</h4>
-                                <p class="text-xs text-charcoal-500 mt-0.5">Secure your lease months before arriving in Leeds. Everything is managed digitally via our secure interface.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex gap-4">
-                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white shadow-sm border border-brand-200 flex items-center justify-center text-brand-600">
-                                <i class="fa-solid fa-cloud-sun"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-semibold text-charcoal-900">Solar-Subsidised Electrical Tariffs</h4>
-                                <p class="text-xs text-charcoal-500 mt-0.5">Our green solar panels decrease utility bills, meaning more budget saved for university studies or young migrant families.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Highlight Badge -->
-                    <div class="mt-8 p-4 bg-white rounded-xl border border-brand-200 flex items-center gap-3 shadow-sm">
-                        <i class="fa-solid fa-shield-halved text-brand-500 text-xl"></i>
-                        <span class="text-xs text-charcoal-500 font-mono">Lettings operate under verified Leeds City Council Selective & HMO licensing conditions.</span>
-                    </div>
-                </div>
-
-                <!-- Right Column: Gallery Simulator with Custom Themed Images -->
-                <div class="relative">
-                    <div class="absolute inset-0 bg-brand-200/30 rounded-3xl filter blur-2xl transform rotate-3"></div>
-                    <div class="relative bg-white p-6 rounded-3xl border border-brand-100 shadow-xl">
-                        <!-- Simulated Property Gallery Slider -->
-                        <div class="relative h-64 rounded-2xl overflow-hidden mb-4 group bg-charcoal-950">
-                            <img id="property-slide-img" src="https://placehold.co/600x400/18221b/769178?text=Project+Woodhouse+Leeds" alt="Vishvaas Projects Leeds" class="w-full h-full object-cover transition-all duration-500 transform scale-100 group-hover:scale-105">
-                            <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center bg-charcoal-900/90 p-3 rounded-xl backdrop-blur-sm border border-brand-500/20">
-                                <div>
-                                    <h4 id="property-slide-title" class="text-xs font-bold text-white">Project Woodhouse Leeds</h4>
-                                    <p id="property-slide-desc" class="text-[10px] text-brand-300">Equipped with custom tier-1 solar panel integrations</p>
-                                </div>
-                                <span class="text-[10px] bg-brand-500 text-white px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Fully Let</span>
-                            </div>
-                        </div>
-                        
-                        <!-- Controls & specs styled to sage/logo colors -->
-                        <div class="grid grid-cols-3 gap-3">
-                            <button onclick="changePropertySlide(1)" class="p-2.5 bg-brand-50 hover:bg-brand-100 border border-brand-200 rounded-xl text-center text-xs font-semibold text-charcoal-900 transition-all">
-                                Woodhouse
-                            </button>
-                            <button onclick="changePropertySlide(2)" class="p-2.5 bg-brand-50 hover:bg-brand-100 border border-brand-200 rounded-xl text-center text-xs font-semibold text-charcoal-900 transition-all">
-                                Headingley
-                            </button>
-                            <button onclick="changePropertySlide(3)" class="p-2.5 bg-brand-50 hover:bg-brand-100 border border-brand-200 rounded-xl text-center text-xs font-semibold text-charcoal-900 transition-all">
-                                Chapel Allerton
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- PropTech Showcase Section -->
-    <section id="ai-app" class="py-24 bg-charcoal-950 relative overflow-hidden border-t border-charcoal-900">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-500/10 rounded-full blur-[160px] pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs uppercase tracking-widest font-mono text-brand-400 font-bold flex items-center justify-center gap-1.5">
-                    <span class="h-2 w-2 rounded-full bg-accent-500 animate-pulse"></span> The Future: PropTech Alpha Demo
-                </span>
-                <h2 class="text-3xl sm:text-4xl font-bold text-white font-display mt-2 mb-4">Multimodal AI Property Portfolio Platform</h2>
-                <p class="text-brand-200/70">
-                    Interact with your properties, builders, or compliance metrics via standard messaging. Below is our actual interactive portal sandbox designed for Landlords, Tenants, and Staff.
+    <section id="landlords" class="py-20 bg-white border-b border-brand-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            <div>
+                <p class="text-xs uppercase tracking-widest font-mono text-accent-500 font-bold">Landlords</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900 font-display mt-2">Professional Landlord and Agency Services</h2>
+                <p class="text-charcoal-500 mt-4 leading-relaxed">
+                    Our landlord and agency proposition is expanding with AI-assisted workflows.
+                    Estate and lettings capabilities are being introduced through a structured, professional rollout.
+                    Agency-focused user access is planned up to 5 users for selected plans.
                 </p>
             </div>
 
-            <!-- SANDBOX INTERACTION CONTAINER -->
-            <div class="dark-glass rounded-3xl overflow-hidden border border-brand-500/20 shadow-2xl">
-                <!-- Top Control Bar -->
-                <div class="bg-charcoal-900/95 border-b border-brand-500/20 px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
-                    <div class="flex items-center space-x-3">
-                        <span class="h-3 w-3 rounded-full bg-brand-500 animate-pulse"></span>
-                        <h3 class="text-sm font-bold uppercase tracking-wider font-mono text-white flex items-center gap-2">
-                            Vishvaas AI Engine <span class="text-brand-400 font-normal">v1.4 Enterprise</span>
-                        </h3>
-                    </div>
-                    
-                    <!-- Role Switcher with Sage & Accent Color Themes -->
-                    <div class="flex bg-charcoal-950 p-1.5 rounded-xl border border-brand-500/10">
-                        <button onclick="selectAppRole('tenant')" id="role-btn-tenant" class="role-btn px-4 py-1.5 rounded-lg text-xs font-semibold transition-all bg-brand-500 text-white">
-                            <i class="fa-solid fa-house-chimney mr-1.5"></i> Tenant Portal
-                        </button>
-                        <button onclick="selectAppRole('landlord')" id="role-btn-landlord" class="role-btn px-4 py-1.5 rounded-lg text-xs font-semibold text-brand-300 hover:text-white transition-all">
-                            <i class="fa-solid fa-chart-pie mr-1.5"></i> Landlord Terminal
-                        </button>
-                        <button onclick="selectAppRole('staff')" id="role-btn-staff" class="role-btn px-4 py-1.5 rounded-lg text-xs font-semibold text-brand-300 hover:text-white transition-all relative">
-                            <i class="fa-solid fa-users mr-1.5"></i> Agency (5 Seats Cap)
-                            <span class="absolute -top-1 -right-1 flex h-2 w-2">
-                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-500 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2 w-2 bg-accent-500"></span>
-                            </span>
-                        </button>
-                    </div>
+            <form class="bg-brand-50/70 rounded-2xl border border-brand-100 shadow-sm p-6">
+                <h3 class="text-lg font-semibold text-charcoal-900">Contact Us - Landlords</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                    <input type="text" placeholder="Name" class="w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm" required>
+                    <input type="email" placeholder="Email" class="w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm" required>
+                    <input type="tel" placeholder="Phone (optional)" class="sm:col-span-2 w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm">
+                    <textarea rows="4" class="sm:col-span-2 w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm">Hi, I am a landlord and want to discuss property management and upcoming AI-enabled agency services.</textarea>
                 </div>
-
-                <!-- Main Grid: Chat Side & Dashboard Side -->
-                <div class="grid grid-cols-1 lg:grid-cols-12">
-                    
-                    <!-- Chat Control Area (Left column - 5 cols) -->
-                    <div class="lg:col-span-5 border-r border-brand-500/10 p-6 flex flex-col bg-charcoal-900/40 h-[500px]">
-                        <div class="flex items-center justify-between border-b border-brand-500/15 pb-3 mb-4">
-                            <div class="text-[10px] text-brand-300 uppercase tracking-widest font-mono font-semibold">Natural Language UI</div>
-                            <span id="role-badge" class="text-[9px] bg-brand-500/20 text-brand-300 border border-brand-500/30 font-bold px-2 py-0.5 rounded-md uppercase tracking-wider">Tenant Gateway</span>
-                        </div>
-
-                        <!-- Chat messages area -->
-                        <div id="chat-messages" class="flex-1 overflow-y-auto space-y-4 pr-2 text-sm text-brand-50">
-                            <!-- Generated Dynamically by JS -->
-                        </div>
-
-                        <!-- Typing Indicator -->
-                        <div id="typing-indicator" class="hidden flex items-center gap-2 text-xs text-brand-300 pl-4 py-2">
-                            <span>Vishvaas AI processes natural speech</span>
-                            <div class="typing-indicator flex gap-1">
-                                <span class="h-1.5 w-1.5 bg-brand-500 rounded-full"></span>
-                                <span class="h-1.5 w-1.5 bg-brand-500 rounded-full"></span>
-                                <span class="h-1.5 w-1.5 bg-brand-500 rounded-full"></span>
-                            </div>
-                        </div>
-
-                        <!-- Quick Action Prompts Grid -->
-                        <div class="mt-4 pt-3 border-t border-brand-500/15">
-                            <div class="text-[10px] text-brand-300 mb-2 font-mono uppercase tracking-wider">Suggested Actions:</div>
-                            <div id="quick-prompts" class="grid grid-cols-1 gap-1.5">
-                                <!-- Generated Dynamically -->
-                            </div>
-                        </div>
-
-                        <!-- Input field & Voice Simulation (Audio Multimodal) -->
-                        <form id="chat-form" onsubmit="handleChatSubmit(event)" class="mt-4 flex gap-2">
-                            <button type="button" onclick="simulateVoiceInput()" class="p-3 bg-charcoal-900 hover:bg-charcoal-800 border border-brand-500/20 rounded-xl text-accent-500 hover:text-accent-600 transition-colors" title="Simulate Multimodal Voice Integration">
-                                <i class="fa-solid fa-microphone-lines text-lg animate-pulse"></i>
-                            </button>
-                            <input id="chat-input" type="text" placeholder="Type here or click a suggest prompt..." class="flex-1 bg-charcoal-950 border border-brand-500/20 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none placeholder-brand-300/40">
-                            <button type="submit" class="px-4 py-2.5 bg-brand-500 hover:bg-brand-600 rounded-xl text-white transition-colors">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </button>
-                        </form>
-                    </div>
-
-                    <!-- Dynamic Dashboard Area (Right column - 7 cols) -->
-                    <div class="lg:col-span-7 p-6 flex flex-col justify-between bg-charcoal-950/80">
-                        <div>
-                            <!-- Dashboard Header -->
-                            <div class="flex items-center justify-between border-b border-brand-500/10 pb-4 mb-6">
-                                <div class="flex items-center space-x-2">
-                                    <i class="fa-solid fa-sliders text-brand-500 text-lg"></i>
-                                    <h4 id="dashboard-title" class="text-xs font-bold text-white uppercase tracking-wider font-mono">Dynamic Dashboard Monitor</h4>
-                                </div>
-                                <span id="dashboard-seat-badge" class="text-[9px] text-accent-500 font-mono font-bold tracking-widest uppercase bg-accent-500/10 px-2 py-0.5 rounded-md">Live Connection</span>
-                            </div>
-
-                            <!-- Interactive Dashboard Cards -->
-                            <div id="dashboard-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <!-- Generated Dynamically based on Mode -->
-                            </div>
-                        </div>
-
-                        <!-- Multi-Tenant Interactive Logs Feed -->
-                        <div class="mt-8 border-t border-brand-500/10 pt-4">
-                            <div class="flex justify-between items-center mb-3">
-                                <span class="text-[10px] uppercase tracking-widest font-mono text-brand-300">System Logs / Transaction Feed</span>
-                                <span class="h-2 w-2 bg-brand-500 rounded-full animate-pulse"></span>
-                            </div>
-                            <div class="bg-charcoal-950/90 rounded-xl p-3 border border-brand-500/10 font-mono text-[10px] text-brand-100 space-y-2 max-h-24 overflow-y-auto" id="dashboard-logs">
-                                <div>[SYS] Connection verified with Leeds council inspection feed.</div>
-                                <div>[SYS] Solar panels online at Woodhouse property - generating 3.8kW.</div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
+                <button type="button" class="mt-4 px-5 py-2.5 rounded-lg bg-brand-700 hover:bg-brand-600 text-white font-semibold text-sm">Send Landlord Enquiry</button>
+            </form>
         </div>
     </section>
 
-    <!-- Split Portal System Landing Gateways -->
-    <section id="portals" class="py-24 relative bg-white border-t border-brand-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs uppercase tracking-widest font-mono text-brand-600 font-bold flex items-center justify-center gap-1.5">
-                    <i class="fa-solid fa-lock"></i> Secured Gateways
-                </span>
-                <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900 font-display mt-2 mb-4">Enterprise Access Infrastructure</h2>
-                <p class="text-charcoal-500">
-                    A three-way login gateway engineered for immediate rent reviews, landlord yield calculations, and restricted agency administration.
+    <section id="investors" class="py-20 bg-brand-50/40 border-b border-brand-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            <div>
+                <p class="text-xs uppercase tracking-widest font-mono text-accent-500 font-bold">Investors</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900 font-display mt-2">Investor Partnerships</h2>
+                <p class="text-charcoal-500 mt-4 leading-relaxed">
+                    We are always looking for investors to work with us across buy, refurbish, refinance, and sell models.
+                    We can support due diligence planning and provide clear execution visibility from purchase through completion.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <!-- Portal 1: Tenant Gateway -->
-                <div class="bg-brand-50/40 p-8 rounded-3xl relative overflow-hidden flex flex-col justify-between group border border-brand-100 hover:border-brand-300 transition-all">
-                    <div>
-                        <div class="w-12 h-12 rounded-2xl bg-white shadow-sm border border-brand-100 flex items-center justify-center text-brand-500 mb-6">
-                            <i class="fa-solid fa-house-user text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-charcoal-900 mb-2 font-display">Tenant Portal</h3>
-                        <p class="text-charcoal-500 text-xs leading-relaxed mb-6">
-                            View ledger histories, track solar panel savings at your property, upload right-to-rent documents or international student enrollment, and log maintenance tickets.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="border-t border-brand-200/50 pt-4 mb-4 flex justify-between text-xs text-charcoal-400 font-mono">
-                            <span>Engine: Active</span>
-                            <span>Users: Live</span>
-                        </div>
-                        <button onclick="triggerToast('Redirecting securely to Tenant Portal...')" class="w-full py-3 bg-white text-charcoal-900 hover:bg-brand-600 hover:text-white font-bold rounded-xl text-xs uppercase tracking-wider transition-all duration-300 border border-brand-200">
-                            Enter Tenant Portal <i class="fa-solid fa-arrow-right ml-2"></i>
-                        </button>
-                    </div>
+            <form class="bg-white rounded-2xl border border-brand-100 shadow-md p-6">
+                <h3 class="text-lg font-semibold text-charcoal-900">Contact Us - Investors</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                    <input type="text" placeholder="Name" class="w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm" required>
+                    <input type="email" placeholder="Email" class="w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm" required>
+                    <input type="tel" placeholder="Phone (optional)" class="sm:col-span-2 w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm">
+                    <textarea rows="4" class="sm:col-span-2 w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm">Hi, I would like to discuss investor opportunities with Vishvaas Properties.</textarea>
                 </div>
-
-                <!-- Portal 2: Landlord Terminal -->
-                <div class="bg-brand-50/40 p-8 rounded-3xl relative overflow-hidden flex flex-col justify-between group border border-accent-500/20 hover:border-brand-300 transition-all">
-                    <div class="absolute top-0 right-0 bg-accent-500 text-white text-[9px] font-bold uppercase tracking-wider px-3 py-1 rounded-bl-xl font-mono">
-                        Active Sandbox
-                    </div>
-                    <div>
-                        <div class="w-12 h-12 rounded-2xl bg-white shadow-sm border border-brand-100 flex items-center justify-center text-brand-500 mb-6">
-                            <i class="fa-solid fa-diagram-project text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-charcoal-900 mb-2 font-display">Landlord Hub</h3>
-                        <p class="text-charcoal-500 text-xs leading-relaxed mb-6">
-                            Simulate real-time yields on West Yorkshire properties, monitor internal builder tasks, analyze refinance cash flows, and check regulatory inspections.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="border-t border-brand-200/50 pt-4 mb-4 flex justify-between text-xs text-charcoal-400 font-mono">
-                            <span>SaaS Stage: Beta</span>
-                            <span>Data Feeds: 15 Projects</span>
-                        </div>
-                        <button onclick="triggerToast('Launching Landlord Sandbox terminal layout...')" class="w-full py-3 bg-white text-charcoal-900 hover:bg-brand-600 hover:text-white font-bold rounded-xl text-xs uppercase tracking-wider transition-all duration-300 border border-brand-200">
-                            Enter Landlord Sandbox <i class="fa-solid fa-arrow-right ml-2"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Portal 3: Agency Staff Terminal -->
-                <div class="bg-brand-50/40 p-8 rounded-3xl relative overflow-hidden flex flex-col justify-between group border border-brand-100 hover:border-brand-300 transition-all">
-                    <div>
-                        <div class="w-12 h-12 rounded-2xl bg-white shadow-sm border border-brand-100 flex items-center justify-center text-brand-500 mb-6">
-                            <i class="fa-solid fa-user-shield text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-charcoal-900 mb-2 font-display">Agency Console</h3>
-                        <p class="text-charcoal-500 text-xs leading-relaxed mb-6">
-                            Process student guarantor waivers, sign off tradesmen maintenance invoices, and update local council safety credentials. Strict safety cap.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="border-t border-brand-200/50 pt-4 mb-4 flex justify-between text-xs text-charcoal-400 font-mono">
-                            <span class="text-accent-600 font-semibold">Strict Limit: Max 5 users</span>
-                            <span>Seats Remaining: 2</span>
-                        </div>
-                        <button onclick="triggerToast('Agency portal authentication triggered. Checking 5-seat security threshold...')" class="w-full py-3 bg-white text-charcoal-900 hover:bg-brand-600 hover:text-white font-bold rounded-xl text-xs uppercase tracking-wider transition-all duration-300 border border-brand-200">
-                            Enter Agency Console <i class="fa-solid fa-arrow-right ml-2"></i>
-                        </button>
-                    </div>
-                </div>
-
-            </div>
+                <button type="button" class="mt-4 px-5 py-2.5 rounded-lg bg-accent-500 hover:bg-accent-600 text-white font-semibold text-sm">Send Investor Enquiry</button>
+            </form>
         </div>
     </section>
 
-    <!-- Contact & Lead Form Section -->
-    <section id="contact" class="py-24 bg-charcoal-900 text-white border-t border-charcoal-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                
-                <!-- Left Hand Details -->
-                <div class="flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs uppercase tracking-widest font-mono text-brand-400 font-bold flex items-center gap-1.5">
-                            <i class="fa-solid fa-paper-plane"></i> Contact & Opportunities
-                        </span>
-                        <h2 class="text-3xl sm:text-4xl font-bold text-white font-display mt-2 mb-6">Let's Partner on Leeds Acquisitions</h2>
-                        <p class="text-brand-100/70 mb-8">
-                            Are you a seller wanting to execute a cash transaction under 4 weeks? An international student/migrant looking for compliant housing? Or an agent interested in beta-testing our Multimodal AI platform? Write to us below.
-                        </p>
-
-                        <div class="space-y-6">
-                            <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-charcoal-950 flex items-center justify-center text-brand-400 border border-brand-500/10">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm font-bold text-white">Leeds Head Office</h4>
-                                    <p class="text-xs text-brand-200/60">Leeds, West Yorkshire, United Kingdom</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-charcoal-950 flex items-center justify-center text-brand-400 border border-brand-500/10">
-                                    <i class="fa-solid fa-shield-halved"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm font-bold text-white">Companies House Registered</h4>
-                                    <p class="text-xs text-brand-200/60">Legally registered under UK real estate development and management criteria</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-charcoal-950 flex items-center justify-center text-brand-400 border border-brand-500/10">
-                                    <i class="fa-solid fa-bolt"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm font-bold text-white">Solar-Subsidized Compliance</h4>
-                                    <p class="text-xs text-brand-200/60">15+ active, fully certified local authority approved portfolio buildings</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-12 p-4 rounded-2xl bg-charcoal-950 border border-brand-500/10 flex items-center gap-3">
-                        <i class="fa-solid fa-circle-exclamation text-accent-500 text-lg"></i>
-                        <span class="text-[10px] font-mono text-brand-200/60">NOTICE: Agency logins are limited to 5 concurrent licensed user seats under state database protection guidelines.</span>
-                    </div>
+    <section id="building-services" class="py-20 bg-white border-b border-brand-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            <div>
+                <p class="text-xs uppercase tracking-widest font-mono text-accent-500 font-bold">Building services</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900 font-display mt-2">Trade-Led Refurbishment and BRRRR Planning</h2>
+                <p class="text-charcoal-500 mt-4 leading-relaxed">
+                    Professional trades include electricians, plumbers, EPC assessors, roofers, bricklayers, joiners, painters, and decorators.
+                    We can refurbish auction properties, advise on BRRRR delivery, and provide AI-assisted investment calculation support.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono">
+                    <span class="px-3 py-1 rounded-full bg-brand-100 text-brand-800">Electricians</span>
+                    <span class="px-3 py-1 rounded-full bg-brand-100 text-brand-800">Plumbers</span>
+                    <span class="px-3 py-1 rounded-full bg-brand-100 text-brand-800">EPC</span>
+                    <span class="px-3 py-1 rounded-full bg-brand-100 text-brand-800">Roofing</span>
+                    <span class="px-3 py-1 rounded-full bg-brand-100 text-brand-800">Joinery</span>
+                    <span class="px-3 py-1 rounded-full bg-brand-100 text-brand-800">Decorating</span>
                 </div>
-
-                <!-- Contact Form Card -->
-                <div class="bg-charcoal-950 p-8 rounded-3xl border border-brand-500/10 shadow-2xl">
-                    <h3 class="text-xl font-bold text-white mb-6 font-display">Send an Enquiry</h3>
-                    
-                    <form onsubmit="handleContactSubmit(event)" class="space-y-4">
-                        <div>
-                            <label class="block text-xs font-mono text-brand-300 mb-1 uppercase tracking-wider">Your Name</label>
-                            <input type="text" required class="w-full bg-charcoal-900 border border-brand-500/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-500 placeholder-brand-200/30" placeholder="e.g. John Doe">
-                        </div>
-                        
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-mono text-brand-300 mb-1 uppercase tracking-wider">Email Address</label>
-                                <input type="email" required class="w-full bg-charcoal-900 border border-brand-500/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-500 placeholder-brand-200/30" placeholder="john@domain.com">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-mono text-brand-300 mb-1 uppercase tracking-wider">Phone Number</label>
-                                <input type="tel" class="w-full bg-charcoal-900 border border-brand-500/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-500 placeholder-brand-200/30" placeholder="e.g. +44 7123 456789">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-mono text-brand-300 mb-1 uppercase tracking-wider">I am looking to...</label>
-                            <select class="w-full bg-charcoal-900 border border-brand-500/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-500">
-                                <option>Sell a property (Fast Cash buyout targets)</option>
-                                <option>Rent a home (International student / Legal migrant)</option>
-                                <option>Request PropTech platform developer beta access</option>
-                                <option>Joint Venture / Professional Refurb opportunities</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-mono text-brand-300 mb-1 uppercase tracking-wider">Message Details</label>
-                            <textarea rows="4" class="w-full bg-charcoal-900 border border-brand-500/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-500 placeholder-brand-200/30" placeholder="Include as much property details, locations, student or landlord constraints as you need..."></textarea>
-                        </div>
-
-                        <button type="submit" class="w-full py-4 bg-gradient-to-r from-brand-600 to-brand-500 text-white font-bold rounded-xl text-xs uppercase tracking-widest hover:from-brand-500 hover:to-brand-400 transition-all shadow-lg shadow-brand-500/10">
-                            Submit Secure Enquiry
-                        </button>
-                    </form>
-                </div>
-
             </div>
+
+            <form class="bg-brand-50/70 rounded-2xl border border-brand-100 shadow-sm p-6">
+                <h3 class="text-lg font-semibold text-charcoal-900">Contact Us - Building Services</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                    <input type="text" placeholder="Name" class="w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm" required>
+                    <input type="email" placeholder="Email" class="w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm" required>
+                    <input type="tel" placeholder="Phone (optional)" class="sm:col-span-2 w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm">
+                    <textarea rows="4" class="sm:col-span-2 w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm">Hi, I need support on a refurbishment/building project and BRRRR planning.</textarea>
+                </div>
+                <button type="button" class="mt-4 px-5 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm">Send Building Services Enquiry</button>
+            </form>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-charcoal-950 border-t border-charcoal-900 py-12 text-brand-300/40 text-xs">
+    <section id="vp-manager-ai" class="py-20 bg-gradient-to-b from-brand-50 to-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-8 mb-8 border-b border-charcoal-900 pb-8">
-                <!-- Brand Footer with Logo -->
-                <div class="flex items-center space-x-3">
-                    <div class="bg-white p-1 rounded-xl shadow-sm border border-brand-100 flex items-center justify-center">
-                        <img src="image-1.png" alt="Vishvaas Properties Ltd Logo" class="h-10 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/120x50/f4f7f4/769178?text=VPL';">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <p class="text-xs uppercase tracking-widest font-mono text-accent-500 font-bold">VP Manager AI</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900 font-display mt-2">Static Demo: Property Management with Chat + Dashboard</h2>
+                <p class="text-charcoal-500 mt-4">
+                    VP Manager helps manage properties, tenants, works, and trades through simple chat-based workflows with reporting.
+                    Developed in partnership with <a href="https://e2esoftwaresolutions.co.uk" target="_blank" rel="noopener noreferrer" class="text-brand-700 font-semibold hover:text-brand-600">E2E Software Solutions Ltd</a>.
+                </p>
+                <p class="text-sm text-charcoal-500 mt-2">Reference repo: <a href="https://github.com/preetksingh80/VP-Manager-V2" target="_blank" rel="noopener noreferrer" class="text-brand-700 font-semibold hover:text-brand-600">VP-Manager-V2 on GitHub</a></p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="dark-glass rounded-2xl p-5 text-white border border-brand-500/20">
+                    <div class="text-sm px-3 py-2 rounded-lg bg-white/5 border border-white/10 mb-3">User: show me what i need to do next [landlord]</div>
+
+                    <div class="typing-indicator text-brand-300 text-xs mb-3">
+                        VP Manager AI thinking
+                        <span>.</span><span>.</span><span>.</span>
+                    </div>
+
+                    <div class="text-sm leading-relaxed px-3 py-3 rounded-lg bg-accent-500/15 border border-accent-500/35">
+                        I have checked your current schedule and identified 2 priority properties:<br><br>
+                        1) <strong>14 Victoria Terrace, Leeds LS9 8BD</strong><br>
+                        Boiler service due. Gas engineer <strong>Adam</strong> booked for <strong>15 June 2026</strong>.<br><br>
+                        2) <strong>22 Brook Lane, Morley LS27 9RN</strong><br>
+                        EICR check and certificate booked for <strong>18 June 2026</strong>.<br><br>
+                        Do you want me to see if I can reschedule both jobs with the tradesmen?
+                    </div>
+
+                    <div class="mt-4 flex gap-2">
+                        <input type="text" value="show me what i need to do next [landlord]" readonly class="flex-1 rounded-lg px-3 py-2 text-sm bg-white text-charcoal-900 border border-brand-200">
+                        <button type="button" class="px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold">Send</button>
                     </div>
                 </div>
 
-                <!-- Navigation Links -->
-                <div class="flex flex-wrap gap-6 text-brand-200/70">
-                    <a href="#about" class="hover:text-white transition-colors">Property Operations</a>
-                    <a href="#lettings" class="hover:text-white transition-colors">Pathways</a>
-                    <a href="#ai-app" class="hover:text-white transition-colors">AI PropTech</a>
-                    <a href="#portals" class="hover:text-white transition-colors">Staff Logins</a>
-                </div>
-
-                <!-- Badges -->
-                <div class="flex items-center gap-3 text-xs font-mono text-brand-300 bg-charcoal-900 px-4 py-2 rounded-xl border border-brand-500/10">
-                    <i class="fa-solid fa-house-circle-check text-brand-500"></i>
-                    <span>Leeds Central Registry Feed Connected</span>
+                <div class="bg-white rounded-2xl border border-brand-100 shadow-md p-5">
+                    <h3 class="text-lg font-semibold text-charcoal-900 mb-4">Managed Properties (Demo)</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm border border-brand-100 rounded-lg overflow-hidden">
+                            <thead class="bg-brand-50 text-charcoal-700">
+                                <tr>
+                                    <th class="text-left px-3 py-2 border-b border-brand-100">Property ID</th>
+                                    <th class="text-left px-3 py-2 border-b border-brand-100">Address</th>
+                                    <th class="text-left px-3 py-2 border-b border-brand-100">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-charcoal-600">
+                                <tr>
+                                    <td class="px-3 py-2 border-b border-brand-100">VP-001</td>
+                                    <td class="px-3 py-2 border-b border-brand-100">14 Victoria Terrace, Leeds LS9 8BD</td>
+                                    <td class="px-3 py-2 border-b border-brand-100">Boiler service due</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-2 border-b border-brand-100">VP-002</td>
+                                    <td class="px-3 py-2 border-b border-brand-100">22 Brook Lane, Morley LS27 9RN</td>
+                                    <td class="px-3 py-2 border-b border-brand-100">EICR scheduled</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-2 border-b border-brand-100">VP-003</td>
+                                    <td class="px-3 py-2 border-b border-brand-100">9 Carlton View, Wakefield WF2 8PT</td>
+                                    <td class="px-3 py-2 border-b border-brand-100">Tenant occupied</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-2 border-b border-brand-100">VP-004</td>
+                                    <td class="px-3 py-2 border-b border-brand-100">31 Regent Street, Bradford BD1 4PN</td>
+                                    <td class="px-3 py-2 border-b border-brand-100">Refurb in progress</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-2">VP-005</td>
+                                    <td class="px-3 py-2">7 Ash Grove, Headingley LS6 3JJ</td>
+                                    <td class="px-3 py-2">Compliance clear</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
-            <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-brand-300/30">
-                <p>© 2026 Vishvaas Properties Limited. All rights reserved. Registered in England & Wales under Companies House.</p>
-                <div class="flex gap-4">
-                    <a href="#" class="hover:text-white">Privacy Regulations</a>
-                    <span>•</span>
-                    <a href="#" class="hover:text-white">Terms of Lettings</a>
-                    <span>•</span>
-                    <a href="#" class="hover:text-white">SaaS Agreement</a>
+            <form class="mt-8 bg-white rounded-2xl border border-brand-100 shadow-md p-6 max-w-3xl mx-auto">
+                <h3 class="text-lg font-semibold text-charcoal-900">Contact Us - VP Manager AI</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                    <input type="text" placeholder="Name" class="w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm" required>
+                    <input type="email" placeholder="Email" class="w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm" required>
+                    <input type="tel" placeholder="Phone (optional)" class="sm:col-span-2 w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm">
+                    <textarea rows="4" class="sm:col-span-2 w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm">Hi, I want to learn more about VP Manager AI for property, tenant, works and trades management.</textarea>
                 </div>
+                <button type="button" class="mt-4 px-5 py-2.5 rounded-lg bg-charcoal-900 hover:bg-charcoal-800 text-white font-semibold text-sm">Send VP Manager Enquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-10 border-t border-brand-100 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-charcoal-500">
+            <div class="flex items-center justify-center mb-3">
+                <img src="image-1.png" alt="Vishvaas Properties Ltd Logo" class="h-10 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/120x50/f4f7f4/769178?text=VPL';">
             </div>
+            Vishvaas Properties Ltd | Company No: 13587087 | Leeds and West Yorkshire
         </div>
     </footer>
 
-    <!-- Script Engine -->
     <script>
-        // Data Store for Interactive PropTech Sandbox aligned with Leeds / West Yorkshire Details
-        const appState = {
-            currentRole: 'tenant', // 'tenant', 'landlord', 'staff'
-            conversations: {
-                tenant: [
-                    { sender: 'ai', text: "Welcome to your Vishvaas Tenant Gateway. I am monitoring Project Woodhouse's active solar battery arrays. How can I assist with your tenancy status today?" }
-                ],
-                landlord: [
-                    { sender: 'ai', text: "Systems online. 15 properties tracked across Leeds and surrounding areas. Internal build tradesmen timelines synced. How can I help with refinancing schedules or yields?" }
-                ],
-                staff: [
-                    { sender: 'ai', text: "Agency Dashboard online. Security check passed: Agent Seat 3 of 5 active. Ready to audit international student guarantor waivers and safety logs." }
-                ]
-            },
-            quickPrompts: {
-                tenant: [
-                    "Report leaky radiator in Flat 3",
-                    "Check solar power storage savings log",
-                    "Submit study visa status proof"
-                ],
-                landlord: [
-                    "Calculate Leeds portfolio gross yield",
-                    "Update timeline for Woodhouse HMO project",
-                    "Draft cash refinancing metrics"
-                ],
-                staff: [
-                    "Check international applicant vetting logs",
-                    "Assign gas safety plumber task",
-                    "Review Leeds City Council inspection feed"
-                ]
-            },
-            dashboardData: {
-                tenant: [
-                    { icon: 'fa-droplet text-brand-500', label: 'Maintenance Requests', value: '1 Active Ticket', sub: 'Steve arriving tomorrow' },
-                    { icon: 'fa-solar-panel text-accent-500', label: 'Solar Subsidies (Today)', value: '12.4 kWh Saved', sub: 'Rent bill deduction: £3.80' },
-                    { icon: 'fa-calendar-check text-brand-500', label: 'Tenancy Status', value: 'Approved & Active', sub: 'Next payment: 1st of Month' },
-                    { icon: 'fa-shield-check text-brand-500', label: 'Council Inspection', value: '100% Compliant', sub: 'Safe Living Verified' }
-                ],
-                landlord: [
-                    { icon: 'fa-home text-brand-500', label: 'Total Managed Projects', value: '15 Active Units', sub: '98.5% occupancy' },
-                    { icon: 'fa-sack-dollar text-brand-500', label: 'Average Gross Yield', value: '8.4% Yield', sub: 'Avg rent: £1,150/unit' },
-                    { icon: 'fa-helmet-safety text-accent-500', label: 'Active Builds (Internal)', value: '2 Projects Live', sub: 'Headingley: 95% complete' },
-                    { icon: 'fa-percent text-brand-500', label: 'Refinance Status', value: '£420k Released', sub: 'Reinvesting in local stock' }
-                ],
-                staff: [
-                    { icon: 'fa-users-cog text-brand-500', label: 'Staff Limit Status', value: '3 / 5 Seats Live', sub: 'Strict security lock active' },
-                    { icon: 'fa-file-signature text-brand-500', label: 'Guarantor Waivers', value: '4 Pending Review', sub: '3 Legal Migrants checked' },
-                    { icon: 'fa-building-shield text-accent-500', label: 'Local Safety Audits', value: '15 compliant badges', sub: 'HMO licenses fully updated' },
-                    { icon: 'fa-people-carry-box text-brand-500', label: 'Tradesmen Assigned', value: '6 Builders active', sub: 'Locations: LS6 & LS9' }
-                ]
-            },
-            customResponses: {
-                "Report leaky radiator in Flat 3": {
-                    reply: "Maintenance request logged into the Leeds portal. I've scheduled our internal builder team lead Michael to visit tomorrow. Safety ticket T-492 created.",
-                    updateDashboard: { index: 0, value: "1 Active Ticket", sub: "Builder Michael booked" }
-                },
-                "Check solar power storage savings log": {
-                    reply: "Generating energy consumption metrics... Your integrated tier-1 solar panel roof arrays saved you a combined total of £34.80 over the last 30 days.",
-                    updateDashboard: { index: 1, value: "£34.80 Total Saved", sub: "Eco-solar system active" }
-                },
-                "Submit study visa status proof": {
-                    reply: "Secure student pathway directory opened. Please drop or specify your digital enrollment letters or right-to-rent visas here.",
-                    updateDashboard: { index: 2, value: "Documents Verified", sub: "Waiver approved successfully" }
-                },
-                "Calculate Leeds portfolio gross yield": {
-                    reply: "The average gross yield across your 15 completed projects remains solid at 8.4%. We project an increase to 8.6% once the Headingley HMO completes refinance.",
-                    updateDashboard: { index: 1, value: "8.6% Projected", sub: "After pending refinance" }
-                },
-                "Update timeline for Woodhouse HMO project": {
-                    reply: "Our in-house plasterers and electric tradesmen concluded high-efficiency solar retrofits today. Council building regulations inspection is slated for Thursday.",
-                    updateDashboard: { index: 2, value: "1 Project Left", sub: "Inspections scheduled" }
-                },
-                "Draft cash refinancing metrics": {
-                    reply: "Simulating BRRR recycling model: releasing £135,000 equity from Woodhouse assets. Ready for instant cash offers on upcoming West Yorkshire properties.",
-                    updateDashboard: { index: 3, value: "Draft Ready", sub: "Ready for quick auction buy" }
-                },
-                "Check international applicant vetting logs": {
-                    reply: "Reviewing 4 legal migrant and international student profiles. Guarantor requirements waived due to secure advanced rent deposits.",
-                    updateDashboard: { index: 1, value: "Waivers Audited", sub: "No outstanding actions" }
-                },
-                "Assign gas safety plumber task": {
-                    reply: "Task assigned to internal Gas Safe engineer Tom for Woodhouse heating checks. Status update routed to Leeds Council logs.",
-                    updateDashboard: { index: 3, value: "7 Builders active", sub: "Tom scheduled for Woodhouse" }
-                },
-                "Review Leeds City Council inspection feed": {
-                    reply: "Database successfully verified. All 15 local authority HMO and selective licenses are up to date with zero infractions detected.",
-                    updateDashboard: { index: 2, value: "100% Inspected", sub: "All building regs passed" }
-                }
-            }
-        };
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-        // Initialize App UI on load
-        window.onload = function() {
-            renderChat();
-            renderPrompts();
-            renderDashboard();
-            
-            // Toggle Mobile Menu
-            const btn = document.getElementById('mobile-menu-btn');
-            const menu = document.getElementById('mobile-menu');
-            btn.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
             });
-        };
-
-        // Render dynamic chatbot messages
-        function renderChat() {
-            const container = document.getElementById('chat-messages');
-            container.innerHTML = '';
-            
-            const currentMessages = appState.conversations[appState.currentRole];
-            currentMessages.forEach(msg => {
-                const isAi = msg.sender === 'ai';
-                const wrapper = document.createElement('div');
-                wrapper.className = `flex ${isAi ? 'justify-start' : 'justify-end'}`;
-
-                const content = document.createElement('div');
-                content.className = `max-w-[85%] px-4 py-2.5 rounded-2xl ${
-                    isAi 
-                    ? 'bg-charcoal-900 text-brand-100 rounded-tl-none border border-brand-500/20' 
-                    : 'bg-brand-500 text-white font-medium rounded-tr-none'
-                }`;
-                
-                content.textContent = msg.text;
-                wrapper.appendChild(content);
-                container.appendChild(wrapper);
-            });
-            
-            // Auto scroll to bottom
-            container.scrollTop = container.scrollHeight;
-        }
-
-        // Render prompt options based on state
-        function renderPrompts() {
-            const container = document.getElementById('quick-prompts');
-            container.innerHTML = '';
-            
-            const currentPrompts = appState.quickPrompts[appState.currentRole];
-            currentPrompts.forEach(pText => {
-                const btn = document.createElement('button');
-                btn.type = 'button';
-                btn.className = "text-left text-xs bg-charcoal-900 hover:bg-charcoal-800 border border-brand-500/10 rounded-xl px-3 py-2 text-brand-100 transition-colors flex items-center gap-2 hover:border-brand-500/35";
-                btn.innerHTML = `<i class="fa-solid fa-microphone text-[10px] text-accent-500 animate-pulse"></i> ${pText}`;
-                btn.onclick = () => submitPredefinedQuery(pText);
-                container.appendChild(btn);
-            });
-        }
-
-        // Render interactive properties / user states dashboard
-        function renderDashboard() {
-            const container = document.getElementById('dashboard-grid');
-            container.innerHTML = '';
-
-            const items = appState.dashboardData[appState.currentRole];
-            items.forEach(item => {
-                const card = document.createElement('div');
-                card.className = "bg-charcoal-900/50 border border-brand-500/10 p-4 rounded-2xl flex items-start gap-3 transition-all hover:border-brand-500/20";
-                
-                card.innerHTML = `
-                    <div class="w-10 h-10 rounded-xl bg-charcoal-950 flex items-center justify-center border border-brand-500/10">
-                        <i class="fa-solid ${item.icon} text-lg"></i>
-                    </div>
-                    <div>
-                        <div class="text-[9px] font-mono uppercase text-brand-300 font-semibold tracking-wider">${item.label}</div>
-                        <div class="text-sm font-extrabold text-white mt-0.5">${item.value}</div>
-                        <div class="text-[10px] text-brand-200/50 mt-0.5">${item.sub}</div>
-                    </div>
-                `;
-                container.appendChild(card);
-            });
-        }
-
-        // Handle quick role selector switching matching logo hues
-        function selectAppRole(role) {
-            appState.currentRole = role;
-            
-            // Toggle active classes in role tabs
-            document.querySelectorAll('.role-btn').forEach(btn => {
-                btn.className = "role-btn px-4 py-1.5 rounded-lg text-xs font-semibold text-brand-300 hover:text-white transition-all";
-            });
-
-            const activeBtn = document.getElementById(`role-btn-${role}`);
-            if(role === 'tenant') {
-                activeBtn.className = "role-btn px-4 py-1.5 rounded-lg text-xs font-semibold bg-brand-500 text-white transition-all";
-                document.getElementById('role-badge').innerText = "Tenant Gateway";
-                document.getElementById('role-badge').className = "text-[9px] bg-brand-500/20 text-brand-300 border border-brand-500/30 font-bold px-2 py-0.5 rounded-md uppercase tracking-wider";
-                document.getElementById('dashboard-title').innerText = "Tenant Household Monitor";
-                document.getElementById('dashboard-seat-badge').innerText = "Leeds City Code: LS4";
-                document.getElementById('dashboard-seat-badge').className = "text-[9px] text-accent-500 font-mono font-bold tracking-widest uppercase bg-accent-500/10 px-2 py-0.5 rounded-md";
-            } else if (role === 'landlord') {
-                activeBtn.className = "role-btn px-4 py-1.5 rounded-lg text-xs font-semibold bg-brand-500 text-white font-bold transition-all";
-                document.getElementById('role-badge').innerText = "Landlord Hub";
-                document.getElementById('role-badge').className = "text-[9px] bg-brand-500/20 text-brand-300 border border-brand-500/30 font-bold px-2 py-0.5 rounded-md uppercase tracking-wider";
-                document.getElementById('dashboard-title').innerText = "Leeds Portfolio Hub";
-                document.getElementById('dashboard-seat-badge').innerText = "15 Completed Projects";
-                document.getElementById('dashboard-seat-badge').className = "text-[9px] text-brand-400 font-mono font-bold tracking-widest uppercase bg-brand-500/10 px-2 py-0.5 rounded-md";
-            } else {
-                activeBtn.className = "role-btn px-4 py-1.5 rounded-lg text-xs font-semibold bg-accent-500 text-white transition-all";
-                document.getElementById('role-badge').innerText = "Agent Console (5 User Cap)";
-                document.getElementById('role-badge').className = "text-[9px] bg-accent-500/20 text-accent-100 border border-accent-500/30 font-bold px-2 py-0.5 rounded-md uppercase tracking-wider";
-                document.getElementById('dashboard-title').innerText = "Multi-Tenant Operations";
-                document.getElementById('dashboard-seat-badge').innerText = "Agent Session: 3 of 5 active";
-                document.getElementById('dashboard-seat-badge').className = "text-[9px] text-accent-500 font-mono font-bold tracking-widest uppercase bg-accent-500/10 px-2 py-0.5 rounded-md";
-            }
-
-            // Log change
-            logSystemEvent(`[USER] Workspace session configured to: [${role.toUpperCase()} COMPONENT]`);
-            
-            renderChat();
-            renderPrompts();
-            renderDashboard();
-        }
-
-        // Simulate User Predefined Commands
-        function submitPredefinedQuery(pText) {
-            // Push user query to conversation array
-            appState.conversations[appState.currentRole].push({ sender: 'user', text: pText });
-            renderChat();
-
-            // Toggle typing visual effect
-            const loader = document.getElementById('typing-indicator');
-            loader.classList.remove('hidden');
-
-            setTimeout(() => {
-                loader.classList.add('hidden');
-                
-                // Fetch dynamic answers
-                const data = appState.customResponses[pText];
-                let responseText = "Query registered safely under Central West Yorkshire operations database. Builders informed.";
-                
-                if (data) {
-                    responseText = data.reply;
-                    
-                    // Trigger dynamic dashboard feedback
-                    if (data.updateDashboard) {
-                        const targetItem = appState.dashboardData[appState.currentRole][data.updateDashboard.index];
-                        if (targetItem) {
-                            targetItem.value = data.updateDashboard.value;
-                            targetItem.sub = data.updateDashboard.sub;
-                            renderDashboard();
-                            logSystemEvent(`[VAL] Dashboard value update detected: ${targetItem.label} -> ${data.updateDashboard.value}`);
-                        }
-                    }
-                }
-
-                // Push AI text
-                appState.conversations[appState.currentRole].push({ sender: 'ai', text: responseText });
-                renderChat();
-                logSystemEvent(`[AI] System feedback formulated for role: ${appState.currentRole}`);
-            }, 1000);
-        }
-
-        // Custom manual submit field
-        function handleChatSubmit(e) {
-            e.preventDefault();
-            const input = document.getElementById('chat-input');
-            const userVal = input.value.trim();
-            if(!userVal) return;
-
-            // Push custom text
-            appState.conversations[appState.currentRole].push({ sender: 'user', text: userVal });
-            renderChat();
-            input.value = '';
-
-            const loader = document.getElementById('typing-indicator');
-            loader.classList.remove('hidden');
-
-            setTimeout(() => {
-                loader.classList.add('hidden');
-                
-                // Generic conversational response fallback
-                let reply = `Thank you for requesting "${userVal}". As this is the active live sandbox, select or click any of the Suggested Action items to preview dynamic dashboard adjustments.`;
-                
-                appState.conversations[appState.currentRole].push({ sender: 'ai', text: reply });
-                renderChat();
-                logSystemEvent(`[AI] Decoded custom text command input via central parser`);
-            }, 1200);
-        }
-
-        // Simulate Micro Voice Input Event using the crimson/accent animations
-        function simulateVoiceInput() {
-            triggerToast("Voice Listening Mode active... Speak a Leeds property query.");
-            logSystemEvent("[VOICE] Microphone simulation started. Multimodal voice parser online.");
-            
-            setTimeout(() => {
-                const sampleVoicePrompts = {
-                    tenant: "Check solar power storage savings log",
-                    landlord: "Calculate Leeds portfolio gross yield",
-                    staff: "Check international applicant vetting logs"
-                };
-                
-                const queryText = sampleVoicePrompts[appState.currentRole];
-                document.getElementById('chat-input').value = queryText;
-                triggerToast(`Voice recognized: "${queryText}"`);
-                logSystemEvent(`[VOICE] Speech-to-text translated: "${queryText}"`);
-            }, 1800);
-        }
-
-        // Global customized toast trigger to bypass browser alerts
-        function triggerToast(text) {
-            const toast = document.getElementById('custom-toast');
-            const message = document.getElementById('toast-message');
-            message.textContent = text;
-            
-            toast.classList.remove('translate-y-20', 'opacity-0');
-            toast.classList.add('translate-y-0', 'opacity-100');
-            
-            setTimeout(() => {
-                toast.classList.add('translate-y-20', 'opacity-0');
-                toast.classList.remove('translate-y-0', 'opacity-100');
-            }, 3000);
-        }
-
-        // Log system simulator feed events
-        function logSystemEvent(text) {
-            const logsDiv = document.getElementById('dashboard-logs');
-            const logRow = document.createElement('div');
-            logRow.textContent = text;
-            logsDiv.appendChild(logRow);
-            logsDiv.scrollTop = logsDiv.scrollHeight;
-        }
-
-        // Slider logic for Completed Projects Gallery using verified logo colors
-        const propertiesData = {
-            1: {
-                img: "https://placehold.co/600x400/18221b/769178?text=Project+Woodhouse+Leeds",
-                title: "Project Woodhouse Leeds",
-                desc: "Equipped with custom tier-1 solar panel integrations"
-            },
-            2: {
-                img: "https://placehold.co/600x400/18221b/5d745e?text=Project+Headingley+Leeds",
-                title: "Project Headingley Leeds",
-                desc: "6-bedroom high-density student HMO fully licensed under council regs."
-            },
-            3: {
-                img: "https://placehold.co/600x400/18221b/cbd7cc?text=Project+Chapel+Allerton",
-                title: "Project Chapel Allerton",
-                desc: "High-spec modern professional apartment refurbished by in-house builders."
-            }
-        };
-
-        function changePropertySlide(id) {
-            const data = propertiesData[id];
-            if(!data) return;
-
-            const imgEl = document.getElementById('property-slide-img');
-            const titleEl = document.getElementById('property-slide-title');
-            const descEl = document.getElementById('property-slide-desc');
-
-            // Fade transition animation simulation
-            imgEl.style.opacity = '0.3';
-            setTimeout(() => {
-                imgEl.src = data.img;
-                titleEl.textContent = data.title;
-                descEl.textContent = data.desc;
-                imgEl.style.opacity = '1';
-                logSystemEvent(`[GALLERY] Displaying specifications for ${data.title}`);
-            }, 250);
-        }
-
-        // Contact submit message interception
-        function handleContactSubmit(e) {
-            e.preventDefault();
-            triggerToast("Success! Your enquiry has been safely routed to our Leeds builders and advisors.");
-            logSystemEvent("[SYS] Lead logged. Match routed to acquisition pipeline.");
-            e.target.reset();
-        }
+        });
     </script>
 </body>
 </html>
+
