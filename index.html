@@ -80,6 +80,59 @@
             backdrop-filter: blur(10px);
         }
 
+        .nav-link {
+            color: #232b26;
+            padding: 0.5rem 0.2rem;
+            border-bottom: 2px solid transparent;
+            transition: color 180ms ease, border-color 180ms ease;
+        }
+
+        .nav-link:hover {
+            color: #4a5c4b;
+            border-bottom-color: #a7bda9;
+        }
+
+        .nav-link.active {
+            color: #1c241c;
+            border-bottom-color: #769178;
+            font-weight: 700;
+        }
+
+        .vp-nav-cta {
+            border: 1px solid rgba(93, 116, 94, 0.45);
+            border-radius: 0.65rem;
+            background: linear-gradient(180deg, rgba(167, 189, 169, 0.35), rgba(199, 216, 200, 0.5));
+            padding: 0.5rem 0.7rem;
+            border-bottom-width: 1px;
+            box-shadow: 0 6px 14px rgba(60, 75, 61, 0.1);
+        }
+
+        .vp-nav-cta:hover {
+            color: #1c241c;
+            border-color: rgba(74, 92, 75, 0.65);
+            background: linear-gradient(180deg, rgba(129, 159, 131, 0.38), rgba(167, 189, 169, 0.55));
+            transform: translateY(-1px);
+        }
+
+        .vp-nav-cta.active {
+            background: linear-gradient(180deg, rgba(118, 145, 120, 0.45), rgba(167, 189, 169, 0.62));
+            border-color: rgba(74, 92, 75, 0.8);
+            border-bottom-color: rgba(74, 92, 75, 0.8);
+        }
+
+        .brand-mark-wrap {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 247, 244, 0.98));
+            border: 1px solid rgba(118, 145, 120, 0.26);
+            box-shadow: 0 8px 18px rgba(28, 36, 28, 0.08);
+            border-radius: 0.9rem;
+            padding: 0.45rem 0.6rem;
+        }
+
+        .brand-mark {
+            image-rendering: -webkit-optimize-contrast;
+            filter: contrast(1.16) saturate(1.08) drop-shadow(0 1px 1px rgba(28, 36, 28, 0.2));
+        }
+
         .typing-indicator span {
             animation: blink 1.4s infinite both;
         }
@@ -97,24 +150,55 @@
             20% { opacity: 1; }
             100% { opacity: .2; }
         }
+
+        .city-target {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border-radius: 9999px;
+            background: #22c55e;
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+            animation: targetPulse 1.8s infinite;
+            transform: translate(-50%, -50%);
+        }
+
+        .city-target::after {
+            content: '';
+            position: absolute;
+            inset: 3px;
+            border-radius: 9999px;
+            background: #166534;
+        }
+
+        @keyframes targetPulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.75);
+            }
+            75% {
+                box-shadow: 0 0 0 14px rgba(34, 197, 94, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+            }
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-brand-500 selection:text-white">
 
-    <header class="sticky top-0 z-40 w-full light-glass border-b border-brand-100">
+    <header class="sticky top-0 z-40 w-full border-b border-brand-200/70 bg-brand-50/95 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <a href="#home" class="bg-white p-1 rounded-xl shadow-sm border border-brand-100 flex items-center justify-center">
-                    <img src="image-1.png" alt="Vishvaas Properties Ltd Logo" class="h-12 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/150x60/f4f7f4/769178?text=VPL';">
+            <div class="flex items-center justify-between h-20 gap-5">
+                <a href="#home" class="brand-mark-wrap flex items-center justify-center shrink-0">
+                    <img src="image-1.png" alt="Vishvaas Properties Ltd Logo" class="brand-mark h-14 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/150x60/f4f7f4/769178?text=VPL';">
                 </a>
 
-                <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
-                    <a href="#home" class="text-charcoal-800 hover:text-brand-600 transition-colors">Home</a>
-                    <a href="#tenants" class="text-charcoal-800 hover:text-brand-600 transition-colors">Tenants</a>
-                    <a href="#landlords" class="text-charcoal-800 hover:text-brand-600 transition-colors">Landlords</a>
-                    <a href="#investors" class="text-charcoal-800 hover:text-brand-600 transition-colors">Investors</a>
-                    <a href="#building-services" class="text-charcoal-800 hover:text-brand-600 transition-colors">Building services</a>
-                    <a href="#vp-manager-ai" class="text-charcoal-800 hover:text-brand-600 transition-colors">VP Manager AI</a>
+                <nav id="desktop-nav" class="hidden md:flex items-center gap-5 lg:gap-7 text-[13px] font-semibold uppercase tracking-[0.08em]">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#tenants" class="nav-link">Tenants</a>
+                    <a href="#landlords" class="nav-link">Landlords</a>
+                    <a href="#investors" class="nav-link">Investors</a>
+                    <a href="#building-services" class="nav-link">Building services</a>
+                    <a href="vp-manager-ai.html" class="nav-link vp-nav-cta">VP Manager AI</a>
                 </nav>
 
                 <button id="mobile-menu-btn" class="md:hidden text-charcoal-800 hover:text-brand-600 p-2" aria-label="Toggle Menu">
@@ -123,55 +207,52 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden border-t border-brand-100 bg-white px-4 py-4 space-y-2">
-            <a href="#home" class="block text-charcoal-800 hover:text-brand-600 text-base py-2">Home</a>
-            <a href="#tenants" class="block text-charcoal-800 hover:text-brand-600 text-base py-2">Tenants</a>
-            <a href="#landlords" class="block text-charcoal-800 hover:text-brand-600 text-base py-2">Landlords</a>
-            <a href="#investors" class="block text-charcoal-800 hover:text-brand-600 text-base py-2">Investors</a>
-            <a href="#building-services" class="block text-charcoal-800 hover:text-brand-600 text-base py-2">Building services</a>
-            <a href="#vp-manager-ai" class="block text-charcoal-800 hover:text-brand-600 text-base py-2">VP Manager AI</a>
+        <div id="mobile-menu" class="hidden md:hidden border-t border-brand-100 bg-brand-50 px-4 py-4 space-y-2">
+            <a href="#home" class="nav-link active block text-base py-2">Home</a>
+            <a href="#tenants" class="nav-link block text-base py-2">Tenants</a>
+            <a href="#landlords" class="nav-link block text-base py-2">Landlords</a>
+            <a href="#investors" class="nav-link block text-base py-2">Investors</a>
+            <a href="#building-services" class="nav-link block text-base py-2">Building services</a>
+            <a href="vp-manager-ai.html" class="nav-link vp-nav-cta block text-base py-2">VP Manager AI</a>
         </div>
     </header>
 
-    <section id="home" class="relative pt-12 pb-20 md:pt-20 md:pb-24 overflow-hidden bg-gradient-to-b from-brand-50 via-white to-brand-100/50">
-        <div class="absolute inset-0 bg-[linear-gradient(to_right,#cbd7cc_1px,transparent_1px),linear-gradient(to_bottom,#cbd7cc_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-25"></div>
-        <div class="absolute top-20 left-1/4 w-96 h-96 bg-brand-200/40 rounded-full blur-[120px] pointer-events-none"></div>
-        <div class="absolute top-48 right-1/4 w-80 h-80 bg-accent-100/30 rounded-full blur-[100px] pointer-events-none"></div>
+    <section id="home" class="relative overflow-hidden bg-gradient-to-b from-brand-50 via-[#f6f2e8] to-brand-100/60">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_15%_10%,rgba(167,189,169,.35),transparent_28%),radial-gradient(circle_at_85%_20%,rgba(215,197,166,.35),transparent_30%),linear-gradient(to_bottom,rgba(255,255,255,.4),rgba(255,255,255,.15))]"></div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-4xl mx-auto">
-                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-charcoal-900 mb-6 leading-[1.1] font-display">
-                    Vishvaas Properties<br>
-                    <span class="bg-gradient-to-r from-brand-600 via-brand-500 to-accent-600 bg-clip-text text-transparent">From smart investments and disciplined budgets to expert refurbishment, we deliver quality homes for quality tenants.</span>
-                </h1>
-                <p class="text-lg sm:text-xl text-charcoal-500 mb-8 max-w-3xl mx-auto leading-relaxed">
-                    We transform properties through disciplined acquisition, refurbishment and management across Leeds and West Yorkshire,
-                    creating dependable rental homes and measurable long-term value for landlords and investors.
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 min-h-[calc(100vh-5rem)] py-4 md:py-6 flex items-start">
+            <div class="w-full text-center max-w-6xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-charcoal-900 leading-[1.04] font-display">Vishvaas Properties</h1>
+
+                <p class="mt-4 text-lg sm:text-xl text-brand-700 font-semibold max-w-4xl mx-auto leading-snug">
+                    From smart investments and disciplined budgets to expert refurbishment,
+                </p>
+                <p class="text-lg sm:text-xl text-brand-700 font-semibold max-w-4xl mx-auto leading-snug">
+                    we deliver quality homes for quality tenants.
                 </p>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto mt-10">
-                    <div class="bg-white p-5 rounded-2xl text-center shadow-md border border-brand-100">
-                        <div class="text-3xl font-extrabold text-brand-600 mb-1">5+</div>
-                        <div class="text-xs uppercase tracking-wider text-charcoal-500 font-mono font-semibold">Completed Investor Projects</div>
-                    </div>
-                    <div class="bg-white p-5 rounded-2xl text-center shadow-md border border-brand-100">
-                        <div class="text-3xl font-extrabold text-charcoal-900 mb-1">12+</div>
-                        <div class="text-xs uppercase tracking-wider text-charcoal-500 font-mono font-semibold">Own Portfolio Projects</div>
-                    </div>
-                    <div class="bg-white p-5 rounded-2xl text-center shadow-md border border-brand-100">
-                        <div class="text-3xl font-extrabold text-accent-500 mb-1">Leeds & West Yorkshire</div>
-                        <div class="text-xs uppercase tracking-wider text-charcoal-500 font-mono font-semibold">Core Operating Area</div>
-                    </div>
-                    <div class="bg-white p-5 rounded-2xl text-center shadow-md border border-brand-100">
-                        <div class="text-3xl font-extrabold text-brand-700 mb-1">Renewal</div>
-                        <div class="text-xs uppercase tracking-wider text-charcoal-500 font-mono font-semibold">Energy Upgrades</div>
-                    </div>
-                    <div class="bg-white p-5 rounded-2xl text-center shadow-md border border-brand-100">
-                        <div class="text-3xl font-extrabold text-brand-500 mb-1">~3-4 Months</div>
-                        <div class="text-xs uppercase tracking-wider text-charcoal-500 font-mono font-semibold">Back-to-Brick Refurb Timeline*</div>
+                <div class="mt-4 max-w-4xl mx-auto rounded-xl border border-brand-200/80 bg-white/85 px-4 py-2.5 shadow-sm">
+                    <div class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs sm:text-sm text-charcoal-700">
+                        <span class="uppercase tracking-[0.14em] text-[10px] sm:text-[11px] text-charcoal-500 font-semibold">As Featured On</span>
+                        <span class="inline-flex items-center gap-1 font-bold text-charcoal-900" aria-label="BBC wordmark style text badge">
+                            <span class="px-1.5 py-0.5 rounded bg-charcoal-900 text-white leading-none text-[10px]">B</span>
+                            <span class="px-1.5 py-0.5 rounded bg-charcoal-900 text-white leading-none text-[10px]">B</span>
+                            <span class="px-1.5 py-0.5 rounded bg-charcoal-900 text-white leading-none text-[10px]">C</span>
+                        </span>
+                        <span>Our projects have been featured on Homes Under the Hammer.</span>
+                        <a href="https://www.bbc.co.uk/search?q=Homes+Under+the+Hammer&d=programmes_ps" target="_blank" rel="noopener noreferrer" class="font-semibold text-brand-700 hover:text-brand-600">View</a>
                     </div>
                 </div>
-                <p class="text-xs text-charcoal-500 mt-4">*Typical duration for standard auction properties; scope and property condition can vary.</p>
+
+                <div class="mt-4 max-w-6xl mx-auto rounded-2xl overflow-hidden border border-brand-200 shadow-lg shadow-brand-900/10">
+                    <video class="w-full h-[220px] sm:h-[300px] md:h-[360px] object-cover" autoplay muted loop playsinline>
+                        <source src="KB/58776991_aerial-drone-footage-of-the-town-of-beeston-which-is-a-suburb-in-the-city-of-leeds-in-uk_by_duncan69_preview.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <p class="mt-4 text-sm sm:text-base text-charcoal-700 max-w-5xl mx-auto leading-relaxed bg-white/75 border border-brand-200 rounded-xl px-4 py-3">
+                    We acquire, refurbish and manage homes across Leeds and West Yorkshire with a quality-first, long-term approach for tenants, landlords and investors.
+                </p>
             </div>
         </div>
     </section>
@@ -180,31 +261,49 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-10">
                 <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900 font-display">Where We Operate and How We Transform Properties</h2>
-                <p class="text-charcoal-500 mt-3">Leeds and surrounding West Yorkshire, from acquisition to refurbishment and completed tenant-ready homes.</p>
+                <p class="text-charcoal-500 mt-3">Focused across Leeds, Bradford and Wakefield, with disciplined delivery from acquisition through completed homes.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="rounded-2xl overflow-hidden border border-brand-100 shadow-md bg-white">
-                    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80" alt="Leeds and West Yorkshire streets" class="h-56 w-full object-cover">
-                    <div class="p-4">
-                        <h3 class="font-semibold text-charcoal-900">Leeds and West Yorkshire</h3>
-                        <p class="text-sm text-charcoal-500 mt-1">Local market focus with practical knowledge of area demand and lettings standards.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+                <article class="rounded-2xl border border-brand-100 shadow-md bg-white p-5 sm:p-6">
+                    <h3 class="text-2xl font-bold text-charcoal-900 font-display">Where We Operate</h3>
+                    <p class="text-sm text-charcoal-500 mt-2">Core coverage across West Yorkshire with active projects and delivery teams across key cities.</p>
+
+                    <div class="mt-4 relative rounded-xl overflow-hidden border border-brand-100">
+                        <img src="KB/map.png" alt="Map of Leeds, Bradford and Wakefield" class="w-full h-[280px] sm:h-[320px] object-cover">
+
+                        <span class="city-target" style="left: 53%; top: 44%;"></span>
+                        <span class="city-target" style="left: 34%; top: 37%; animation-delay: 0.35s;"></span>
+                        <span class="city-target" style="left: 50%; top: 67%; animation-delay: 0.7s;"></span>
+
+                        <span class="absolute left-[55%] top-[42%] text-[11px] font-semibold bg-white/95 px-2 py-0.5 rounded-md border border-brand-100">Leeds</span>
+                        <span class="absolute left-[36%] top-[35%] text-[11px] font-semibold bg-white/95 px-2 py-0.5 rounded-md border border-brand-100">Bradford</span>
+                        <span class="absolute left-[52%] top-[65%] text-[11px] font-semibold bg-white/95 px-2 py-0.5 rounded-md border border-brand-100">Wakefield</span>
                     </div>
-                </div>
-                <div class="rounded-2xl overflow-hidden border border-brand-100 shadow-md bg-white">
-                    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80" alt="Property refurbishment process" class="h-56 w-full object-cover">
-                    <div class="p-4">
-                        <h3 class="font-semibold text-charcoal-900">Refurbishment in Progress</h3>
-                        <p class="text-sm text-charcoal-500 mt-1">Professional trades including electricians, plumbers, roofers, joiners, and decorators.</p>
+                </article>
+
+                <article class="rounded-2xl border border-brand-100 shadow-md bg-brand-50/45 p-5 sm:p-6">
+                    <h3 class="text-2xl font-bold text-charcoal-900 font-display">How We Transform Properties</h3>
+                    <p class="text-sm text-charcoal-500 mt-2">A practical, quality-led pathway from purchase to tenant-ready completion.</p>
+
+                    <div class="mt-5 space-y-4">
+                        <div class="rounded-xl border border-brand-100 bg-white p-4">
+                            <p class="text-xs uppercase tracking-wider font-mono text-brand-700">Step 1</p>
+                            <h4 class="font-semibold text-charcoal-900 mt-1">Acquire with Clear Strategy</h4>
+                            <p class="text-sm text-charcoal-500 mt-1">Targeted purchases using local demand insight, refurbishment scope checks and disciplined budgets.</p>
+                        </div>
+                        <div class="rounded-xl border border-brand-100 bg-white p-4">
+                            <p class="text-xs uppercase tracking-wider font-mono text-brand-700">Step 2</p>
+                            <h4 class="font-semibold text-charcoal-900 mt-1">Refurbish with Qualified Trades</h4>
+                            <p class="text-sm text-charcoal-500 mt-1">Coordinated delivery across electrical, plumbing, roofing, joinery and finishing works.</p>
+                        </div>
+                        <div class="rounded-xl border border-brand-100 bg-white p-4">
+                            <p class="text-xs uppercase tracking-wider font-mono text-brand-700">Step 3</p>
+                            <h4 class="font-semibold text-charcoal-900 mt-1">Complete to Lettings Standards</h4>
+                            <p class="text-sm text-charcoal-500 mt-1">Final checks for compliance readiness and long-term operational quality for tenants and landlords.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="rounded-2xl overflow-hidden border border-brand-100 shadow-md bg-white">
-                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80" alt="Completed property interior" class="h-56 w-full object-cover">
-                    <div class="p-4">
-                        <h3 class="font-semibold text-charcoal-900">Completed and Compliant</h3>
-                        <p class="text-sm text-charcoal-500 mt-1">Properties checked for local authority and building regulation readiness.</p>
-                    </div>
-                </div>
+                </article>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mt-10">
@@ -224,9 +323,9 @@
                     <h4 class="font-semibold text-charcoal-900">Building services</h4>
                     <p class="text-sm text-charcoal-500 mt-1">Trade-led delivery and BRRRR planning support.</p>
                 </a>
-                <a href="#vp-manager-ai" class="section-card rounded-xl p-4 shadow-sm hover:shadow-md transition-all">
+                <a href="vp-manager-ai.html" class="section-card rounded-xl p-4 shadow-sm hover:shadow-md transition-all">
                     <h4 class="font-semibold text-charcoal-900">VP Manager AI</h4>
-                    <p class="text-sm text-charcoal-500 mt-1">Chat-first property operations with dashboard reporting.</p>
+                    <p class="text-sm text-charcoal-500 mt-1">Explore the dedicated platform page for next-generation AI property operations.</p>
                 </a>
             </div>
         </div>
@@ -397,9 +496,12 @@
                 <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900 font-display mt-2">Static Demo: Property Management with Chat + Dashboard</h2>
                 <p class="text-charcoal-500 mt-4">
                     VP Manager helps manage properties, tenants, works, and trades through simple chat-based workflows with reporting.
-                    Developed in partnership with <a href="https://e2esoftwaresolutions.co.uk" target="_blank" rel="noopener noreferrer" class="text-brand-700 font-semibold hover:text-brand-600">E2E Software Solutions Ltd</a>.
+                    Developed in partnership with E2E Software Solutions Ltd.
                 </p>
-                <p class="text-sm text-charcoal-500 mt-2">Reference repo: <a href="https://github.com/preetksingh80/VP-Manager-V2" target="_blank" rel="noopener noreferrer" class="text-brand-700 font-semibold hover:text-brand-600">VP-Manager-V2 on GitHub</a></p>
+                <div class="mt-5 flex flex-wrap items-center justify-center gap-3">
+                    <a href="vp-manager-ai.html" class="inline-flex items-center rounded-lg bg-charcoal-900 px-4 py-2 text-sm font-semibold text-white hover:bg-charcoal-800 transition-colors">Open VP Manager Platform Page</a>
+                    <p class="text-sm text-charcoal-500">Reference repo reviewed and incorporated.</p>
+                </div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -485,7 +587,9 @@
     <footer class="py-10 border-t border-brand-100 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-charcoal-500">
             <div class="flex items-center justify-center mb-3">
-                <img src="image-1.png" alt="Vishvaas Properties Ltd Logo" class="h-10 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/120x50/f4f7f4/769178?text=VPL';">
+                <div class="brand-mark-wrap inline-flex items-center justify-center">
+                    <img src="image-1.png" alt="Vishvaas Properties Ltd Logo" class="brand-mark h-12 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/120x50/f4f7f4/769178?text=VPL';">
+                </div>
             </div>
             <div class="font-semibold text-charcoal-700">Vishvaas Properties Ltd</div>
             <div>Company No: 13587087 | Incorporated: 26 August 2021 | Leeds and West Yorkshire</div>
@@ -495,16 +599,28 @@
     <script>
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('a.nav-link');
+
+        function setActiveNav(targetHref) {
+            navLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === targetHref);
+            });
+        }
 
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        mobileMenu.querySelectorAll('a').forEach(link => {
+        navLinks.forEach(link => {
             link.addEventListener('click', () => {
+                const targetHref = link.getAttribute('href');
+                setActiveNav(targetHref);
                 mobileMenu.classList.add('hidden');
             });
         });
+
+        // Keep "Home" active on first load.
+        setActiveNav('#home');
     </script>
 </body>
 </html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VP Manager AI | Next-Generation Property Management Platform</title>
+    <meta name="description" content="VP Manager AI is a next-generation property management software platform for landlords, estate agencies, and investors with chat-first operations, dashboard visibility, and tenant-safe AI workflows.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f4f7f4',
+                            100: '#e4ebe4',
+                            200: '#cbd7cc',
+                            300: '#a7bda9',
+                            400: '#819f83',
+                            500: '#769178',
+                            600: '#5d745e',
+                            700: '#4a5c4b',
+                            800: '#3c4b3d',
+                            900: '#1c241c'
+                        },
+                        sand: {
+                            50: '#faf7f1',
+                            100: '#f4ead9',
+                            200: '#e8d8bb',
+                            300: '#d7c5a6',
+                            400: '#c9b08a',
+                            500: '#b5986f'
+                        },
+                        charcoal: {
+                            50: '#f6f7f6',
+                            100: '#e1e3e1',
+                            500: '#59605b',
+                            800: '#232b26',
+                            900: '#18221b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f4f7f4;
+            color: #18221b;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(118, 145, 120, 0.18);
+        }
+
+        .hero-orb-a {
+            background: radial-gradient(circle at center, rgba(167, 189, 169, 0.5), rgba(167, 189, 169, 0));
+        }
+
+        .hero-orb-b {
+            background: radial-gradient(circle at center, rgba(215, 197, 166, 0.45), rgba(215, 197, 166, 0));
+        }
+
+        .brand-mark-wrap {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 247, 244, 0.98));
+            border: 1px solid rgba(118, 145, 120, 0.26);
+            box-shadow: 0 8px 18px rgba(28, 36, 28, 0.08);
+            border-radius: 0.9rem;
+            padding: 0.45rem 0.6rem;
+        }
+
+        .brand-mark {
+            image-rendering: -webkit-optimize-contrast;
+            filter: contrast(1.16) saturate(1.08) drop-shadow(0 1px 1px rgba(28, 36, 28, 0.2));
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-500 selection:text-white">
+    <header class="sticky top-0 z-40 border-b border-brand-100/80 bg-brand-50/95 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            <a href="index.html#home" class="brand-mark-wrap flex items-center justify-center">
+                <img src="image-1.png" alt="Vishvaas Properties Ltd Logo" class="brand-mark h-14 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/150x60/f4f7f4/769178?text=VPL';">
+            </a>
+            <div class="hidden md:flex items-center gap-6 text-sm font-semibold uppercase tracking-[0.08em] text-charcoal-700">
+                <a href="index.html#home" class="hover:text-brand-700 transition-colors">Home</a>
+                <a href="index.html#tenants" class="hover:text-brand-700 transition-colors">Tenants</a>
+                <a href="index.html#landlords" class="hover:text-brand-700 transition-colors">Landlords</a>
+                <a href="index.html#investors" class="hover:text-brand-700 transition-colors">Investors</a>
+                <a href="index.html#building-services" class="hover:text-brand-700 transition-colors">Building services</a>
+                <span class="text-brand-800 border-b-2 border-brand-500 pb-1">VP Manager AI</span>
+            </div>
+            <a href="index.html#vp-manager-ai" class="inline-flex items-center rounded-lg border border-brand-200 px-3 py-1.5 text-xs font-semibold text-charcoal-800 hover:bg-brand-100 transition-colors">Back to Main Site</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative overflow-hidden bg-gradient-to-b from-brand-50 via-sand-50 to-brand-100/40 py-14 sm:py-16">
+            <div class="hero-orb-a absolute -left-24 top-10 h-80 w-80 blur-2xl"></div>
+            <div class="hero-orb-b absolute -right-20 top-24 h-96 w-96 blur-2xl"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
+                    <div>
+                        <p class="text-xs uppercase tracking-[0.18em] text-brand-700 font-semibold">Next Generation Platform</p>
+                        <h1 class="mt-3 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-charcoal-900 font-display">
+                            VP Manager AI
+                        </h1>
+                        <p class="mt-4 text-lg sm:text-xl text-brand-700 font-semibold">
+                            The new generation of property management software for modern portfolios.
+                        </p>
+                        <p class="mt-4 text-charcoal-600 leading-relaxed max-w-xl">
+                            Built for landlords, estate agencies and investors, VP Manager combines chat-first operations, structured workflows and clear dashboard visibility so teams can run properties faster with better control.
+                        </p>
+                        <div class="mt-6 flex flex-wrap gap-3">
+                            <a href="#contact" class="inline-flex items-center rounded-lg bg-charcoal-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-charcoal-800 transition-colors">Request Early Access</a>
+                            <a href="#capabilities" class="inline-flex items-center rounded-lg border border-brand-200 px-5 py-2.5 text-sm font-semibold text-charcoal-800 hover:bg-brand-50 transition-colors">Explore Capabilities</a>
+                        </div>
+                        <div class="mt-6 flex flex-wrap gap-2 text-xs font-mono">
+                            <span class="px-3 py-1 rounded-full bg-brand-100 text-brand-800">Tenant-Safe by Design</span>
+                            <span class="px-3 py-1 rounded-full bg-sand-100 text-charcoal-800">Auditable AI Workflows</span>
+                            <span class="px-3 py-1 rounded-full bg-brand-100 text-brand-800">Portfolio Intelligence</span>
+                        </div>
+                    </div>
+
+                    <div class="glass rounded-3xl p-4 sm:p-5 shadow-lg shadow-brand-900/10">
+                        <video class="w-full h-[260px] sm:h-[320px] object-cover rounded-2xl border border-brand-100" autoplay muted loop playsinline>
+                            <source src="KB/58776991_aerial-drone-footage-of-the-town-of-beeston-which-is-a-suburb-in-the-city-of-leeds-in-uk_by_duncan69_preview.mp4" type="video/mp4">
+                        </video>
+                        <p class="text-xs text-charcoal-500 mt-3">Preview media used for concept presentation. Product interface visuals shown below are representative of in-development workflows.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="capabilities" class="py-16 bg-white border-y border-brand-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900 font-display">What Makes VP Manager Different</h2>
+                    <p class="text-charcoal-500 mt-3">Designed from architecture-first principles so operations remain fast, reliable, and governed as your portfolio scales.</p>
+                </div>
+
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+                    <article class="rounded-2xl border border-brand-100 bg-brand-50/50 p-5">
+                        <div class="text-brand-700 text-xl"><i class="fa-solid fa-comments"></i></div>
+                        <h3 class="mt-2 font-semibold text-charcoal-900">Chat-First Operations</h3>
+                        <p class="mt-2 text-sm text-charcoal-600">Handle tasks through natural language prompts across properties, tenant requests, and maintenance workflows.</p>
+                    </article>
+                    <article class="rounded-2xl border border-brand-100 bg-brand-50/50 p-5">
+                        <div class="text-brand-700 text-xl"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3 class="mt-2 font-semibold text-charcoal-900">Tenant-Isolated by Default</h3>
+                        <p class="mt-2 text-sm text-charcoal-600">Built with strict tenant boundaries and policy checks to prevent cross-tenant data exposure.</p>
+                    </article>
+                    <article class="rounded-2xl border border-brand-100 bg-brand-50/50 p-5">
+                        <div class="text-brand-700 text-xl"><i class="fa-solid fa-clipboard-check"></i></div>
+                        <h3 class="mt-2 font-semibold text-charcoal-900">Auditable AI Decisions</h3>
+                        <p class="mt-2 text-sm text-charcoal-600">High-impact actions are traceable, validated, and designed with approval controls for operational trust.</p>
+                    </article>
+                    <article class="rounded-2xl border border-brand-100 bg-brand-50/50 p-5">
+                        <div class="text-brand-700 text-xl"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3 class="mt-2 font-semibold text-charcoal-900">Valuation + Insights</h3>
+                        <p class="mt-2 text-sm text-charcoal-600">Roadmap includes transparent valuation outputs and assumption-led decision support for property strategy.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gradient-to-b from-brand-50 to-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                <div class="rounded-2xl border border-brand-100 bg-white p-6 shadow-sm">
+                    <p class="text-xs uppercase tracking-[0.16em] text-brand-700 font-semibold">Platform Model</p>
+                    <h2 class="mt-2 text-3xl font-bold text-charcoal-900 font-display">Built for Real-World Property Teams</h2>
+                    <p class="mt-4 text-charcoal-600 leading-relaxed">VP Manager is being shaped as a white-label, tenant-safe portfolio platform with clear domain boundaries across property, tenancy, portfolio, and document workflows. The model is designed for practical day-to-day execution while remaining enterprise-ready as adoption scales.</p>
+                    <ul class="mt-5 space-y-3 text-sm text-charcoal-700">
+                        <li class="flex gap-2"><span class="text-brand-700">•</span><span>Landlords get action-led worklists and maintenance orchestration.</span></li>
+                        <li class="flex gap-2"><span class="text-brand-700">•</span><span>Agencies gain controlled collaboration across team users and portfolios.</span></li>
+                        <li class="flex gap-2"><span class="text-brand-700">•</span><span>Investors get clearer operational visibility with structured reporting inputs.</span></li>
+                    </ul>
+                </div>
+
+                <div class="rounded-2xl border border-brand-100 bg-charcoal-900 text-white p-6 shadow-md">
+                    <p class="text-xs uppercase tracking-[0.16em] text-brand-300 font-semibold">Example Workflow</p>
+                    <h3 class="mt-2 text-2xl font-bold font-display">From Message to Managed Outcome</h3>
+                    <div class="mt-5 space-y-4 text-sm leading-relaxed">
+                        <div class="rounded-xl border border-white/10 bg-white/5 p-3"><strong>1.</strong> User asks: show me what needs doing next across my portfolio.</div>
+                        <div class="rounded-xl border border-white/10 bg-white/5 p-3"><strong>2.</strong> VP Manager classifies intent, validates scope, and prioritizes scheduled work.</div>
+                        <div class="rounded-xl border border-white/10 bg-white/5 p-3"><strong>3.</strong> Suggested actions are surfaced with dates, trades, and audit-ready task context.</div>
+                        <div class="rounded-xl border border-white/10 bg-white/5 p-3"><strong>4.</strong> High-impact actions can require explicit approval before execution.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 bg-white border-t border-brand-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="rounded-2xl border border-brand-100 bg-brand-50/60 p-6 sm:p-8 shadow-sm">
+                    <h2 class="text-3xl font-bold text-charcoal-900 font-display text-center">Get Early Access to VP Manager AI</h2>
+                    <p class="text-charcoal-600 mt-3 text-center max-w-2xl mx-auto">Interested in using next-generation AI operations for your property portfolio? Register your interest and we will contact you with access updates.</p>
+
+                    <form class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <input type="text" placeholder="Name" class="w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm" required>
+                        <input type="email" placeholder="Email" class="w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm" required>
+                        <input type="text" placeholder="Company / Portfolio" class="w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm">
+                        <input type="tel" placeholder="Phone (optional)" class="w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm">
+                        <textarea rows="4" class="sm:col-span-2 w-full rounded-lg border border-brand-200 px-3 py-2.5 text-sm">Hi, I would like early access information for VP Manager AI.</textarea>
+                        <button type="button" class="sm:col-span-2 mt-1 inline-flex items-center justify-center rounded-lg bg-charcoal-900 hover:bg-charcoal-800 text-white px-5 py-2.5 text-sm font-semibold">Submit Interest</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-10 border-t border-brand-100 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-charcoal-500">
+            <div class="flex items-center justify-center mb-3">
+                <div class="brand-mark-wrap inline-flex items-center justify-center">
+                    <img src="image-1.png" alt="Vishvaas Properties Ltd Logo" class="brand-mark h-12 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/120x50/f4f7f4/769178?text=VPL';">
+                </div>
+            </div>
+            <div class="font-semibold text-charcoal-700">Vishvaas Properties Ltd | VP Manager AI</div>
+            <div>Company No: 13587087 | Incorporated: 26 August 2021 | Leeds and West Yorkshire</div>
+        </div>
+    </footer>
+</body>
+</html>
